@@ -1,8 +1,6 @@
 # Cfaprotein
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cfaprotein`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem will take information from a public website regarding protein content of Chick Fil A items, as well as information regarding calories and other nutritional information that is pertinent to people that work out.
 
 ## Installation
 
