@@ -1,3 +1,10 @@
+require_relative './environment'
+
+require 'pry'
+require 'nokogiri'
+requrie 'open-uri'
+
+
 class Scraper 
   
   def front_page 

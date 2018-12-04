@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
-
+gem 'pry'
+gem 'nokogiri'
 
 
 git_source(:github) {|cfaprotein| "https://github.com/cfaprotein" }
