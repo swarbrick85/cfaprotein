@@ -5,11 +5,9 @@ require 'nokogiri', '1.6.6.2'
 require 'open-uri'
 
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+git_source(:github) {|cfaprotein| "https://github.com/cfaprotein" }
 
-```ruby
-gem 'cfaprotein'
-```
+ruby gem 'cfaprotein'
 
 # Specify your gem's dependencies in cfaprotein.gemspec
 gemspec
