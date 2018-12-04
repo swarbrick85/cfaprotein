@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'David F Swarbrick Jr'"]
   spec.email         = ["'david.swarbrick.jr@gmail.com'"]
 
-  spec.summary       = %q{Chick Fil A protein for weightlifters.}
+  spec.summary       = %q{"Chick Fil A protein for weightlifters."}
   spec.description   = %q{}
   spec.homepage      = "https://github.com/swarbrick85/cfaprotein"
   spec.license       = "MIT"

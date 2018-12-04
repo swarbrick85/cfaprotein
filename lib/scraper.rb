@@ -1,8 +1,8 @@
 require_relative './environment.rb'
 
-require 'pry'
 require 'nokogiri'
-requrie 'open-uri'
+require 'open-uri'
+require 'pry'
 
 
 class Scraper 
