@@ -8,13 +8,19 @@ require 'pry'
 class Scraper 
   
   def front_page 
-    doc = Nokogiri::HTML(open("https://m.nutritionix.com/chick-fil-a/menu/premium/"))
+    doc = Nokogiri::HTML(open("https://www.nutritionix.com/chick-fil-a/menu/premium/"))
     doc 
     binding.pry 
   end 
   
-  
+  def create_from_page 
+    
+    
+    
+  end 
   
   
   
 end 
+
+# for wwww, the first item is on "a" 15
