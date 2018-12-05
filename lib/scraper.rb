@@ -16,7 +16,7 @@ class Scraper
   def create_breakfast_menu
     a = 0 
     15.times{
-      if front_page.css("td")[13 + (11 * a)].text !== "0"
+      if (front_page.css("td")[13 + (11 * a)].text != "0")
          x = Item.new 
          Item.breakfast_all << x 
          z = front_page.css("td")[3 + (11 * a)].text 
