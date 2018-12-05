@@ -38,7 +38,7 @@ class Scraper
     17.times{
       if (front_page.css("td")[179 + (11 * a)].text != "0")
          x = Item.new 
-         Item.breakfast_all << x 
+         Item.entrees_all << x 
          z = front_page.css("td")[169 + (11 * a)].text 
          z[0...11] = ""
          x.name = z 
