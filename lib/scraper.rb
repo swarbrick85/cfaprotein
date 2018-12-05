@@ -27,8 +27,9 @@ class Scraper
          x.total_carbs = front_page.css("td")[10 + (11 * a)].text
          x.sugar = front_page.css("td")[12 + (11 * a)].text
          x.protein = front_page.css("td")[13 + (11 * a)].text
-         a += 1
        end 
+       
+      a += 1
     }
      
   end 
@@ -47,8 +48,9 @@ class Scraper
          x.total_carbs = front_page.css("td")[176 + (11 * a)].text
          x.sugar = front_page.css("td")[178 + (11 * a)].text
          x.protein = front_page.css("td")[179 + (11 * a)].text
-         a += 1
        end 
+       
+       a += 1
     }
      
   end 
@@ -67,8 +69,9 @@ class Scraper
          x.total_carbs = front_page.css("td")[364 + (11 * a)].text
          x.sugar = front_page.css("td")[366 + (11 * a)].text
          x.protein = front_page.css("td")[367 + (11 * a)].text
-         a += 1
        end 
+       
+       a += 1
     }
      
   end 
@@ -87,8 +90,9 @@ class Scraper
          x.total_carbs = front_page.css("td")[409 + (11 * a)].text
          x.sugar = front_page.css("td")[411 + (11 * a)].text
          x.protein = front_page.css("td")[412 + (11 * a)].text
-         a += 1
        end 
+       
+       a += 1
     }
      
   end 
