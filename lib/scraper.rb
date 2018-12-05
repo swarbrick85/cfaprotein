@@ -7,7 +7,6 @@ require 'pry'
 
 class Scraper 
   
-  include Cfaprotein
   
   def front_page 
     doc = Nokogiri::HTML(open("https://www.nutritionix.com/chick-fil-a/menu/premium/"))
