@@ -23,11 +23,11 @@ class Scraper
          z = front_page.css("td")[3 + (11 * a)].text 
          z[0...11] = ""
          x.name = z 
-         x.calories = front_page.css("td")[4 + (11 * a)].text
-         x.fat = front_page.css("td")[5 + (11 * a)].text
-         x.total_carbs = front_page.css("td")[10 + (11 * a)].text
-         x.sugar = front_page.css("td")[12 + (11 * a)].text
-         x.protein = front_page.css("td")[13 + (11 * a)].text
+         x.calories = front_page.css("td")[4 + (11 * a)].text.to_f.round(1)
+         x.fat = front_page.css("td")[5 + (11 * a)].text.to_f.round(1)
+         x.total_carbs = front_page.css("td")[10 + (11 * a)].text.to_f.round(1)
+         x.sugar = front_page.css("td")[12 + (11 * a)].text.to_f.round(1)
+         x.protein = front_page.css("td")[13 + (11 * a)].text.to_f.round(1)
          x.pct_cal_by_protein = (((x.protein * 4)/x.calories) * 100).round(2)
          x.pct_cal_by_fat = (((x.fat * 9)/x.calories) * 100).round(2)
          x.pct_cal_by_sc = (((x.sugar * 4)/x.calories) * 100).round(2)
