@@ -72,4 +72,24 @@ class Scraper
     }
      
   end 
+  
+  def create_sides_menu
+    a = 0 
+    10.times{
+      if (front_page.css("td")[412 + (11 * a)].text != "0")
+         x = Item.new 
+         Item.sides_all << x 
+         z = front_page.css("td")[402 + (11 * a)].text 
+         z[0...11] = ""
+         x.name = z 
+         x.calories = front_page.css("td")[403 + (11 * a)].text
+         x.fat = front_page.css("td")[404 + (11 * a)].text
+         x.total_carbs = front_page.css("td")[409 + (11 * a)].text
+         x.sugar = front_page.css("td")[411 + (11 * a)].text
+         x.protein = front_page.css("td")[412 + (11 * a)].text
+         a += 1
+       end 
+    }
+     
+  end 
 end 
