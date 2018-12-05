@@ -36,15 +36,21 @@ class Scraper
   def create_entrees_menu
     a = 0 
     17.times{
-    x = Item.new 
-    y = Item.entrees_all
-    y << x 
-    z = front_page.css("td")[169 + (11 * a)].text 
-    z[0...11] = ""
-    x.name = z 
-    a += 1
+      if (front_page.css("td")[179 + (11 * a)].text != "0")
+         x = Item.new 
+         Item.breakfast_all << x 
+         z = front_page.css("td")[169 + (11 * a)].text 
+         z[0...11] = ""
+         x.name = z 
+         x.calories = front_page.css("td")[170 + (11 * a)].text
+         x.fat = front_page.css("td")[171 + (11 * a)].text
+         x.total_carbs = front_page.css("td")[176 + (11 * a)].text
+         x.sugar = front_page.css("td")[178 + (11 * a)].text
+         x.protein = front_page.css("td")[179 + (11 * a)].text
+         a += 1
+       end 
     }
-    
+     
   end 
   
 end 
