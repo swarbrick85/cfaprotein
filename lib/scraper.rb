@@ -14,7 +14,13 @@ class Scraper
   end 
   
   def create_breakfast
-    x
+    x = Item.new 
+    Item.breakfast_all << x 
+    y = front_page.css("td")[3].text 
+    y[0...11] = ""
+    x.name = y 
+    
+    binding.pry 
   end 
   
   
