@@ -28,5 +28,10 @@ module Cfaprotein
     :pct_cal_by_protein, :pct_cal_by_fat, :pct_cal_by_sc, :pct_cal_by_cc, :pct_cal_by_tc, :cal_per_protein
     
     x.pct_cal_by_protein = (((x.protein * 4)/x.calories) * 100).round(2)
+    x.pct_cal_by_fat = (((x.fat * 9)/x.calories) * 100).round(2)
+    x.pct_cal_by_sc = (((x.sugar * 4)/x.calories) * 100).round(2)
+    x.pct_cal_by_cc = (((x.complex_carbs * 4)/x.calories) * 100).round(2)
+    x.pct_cal_by_tc = (((x.total_carbs * 4)/x.calories) * 100).round(2)
+    
   end 
 end
