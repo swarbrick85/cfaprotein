@@ -15,10 +15,11 @@ class Scraper
   
   def create_breakfast
     x = Item.new 
-    Item.breakfast_all << x 
-    y = front_page.css("td")[3].text 
-    y[0...11] = ""
-    x.name = y 
+    y = Item.breakfast_all
+    y << x 
+    z = front_page.css("td")[3].text 
+    z[0...11] = ""
+    x.name = z 
     
     binding.pry 
   end 
