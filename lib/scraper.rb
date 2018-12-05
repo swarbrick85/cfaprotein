@@ -117,4 +117,25 @@ class Scraper
     }
      
   end 
+  
+  def create_drinks_menu
+    a = 0 
+    33.times{
+      if (front_page.css("td")[776 + (11 * a)].text != "0")
+         x = Item.new 
+         Item.drinks_all << x 
+         z = front_page.css("td")[766 + (11 * a)].text 
+         z[0...11] = ""
+         x.name = z 
+         x.calories = front_page.css("td")[767 + (11 * a)].text
+         x.fat = front_page.css("td")[768 + (11 * a)].text
+         x.total_carbs = front_page.css("td")[773 + (11 * a)].text
+         x.sugar = front_page.css("td")[775 + (11 * a)].text
+         x.protein = front_page.css("td")[776 + (11 * a)].text
+       end 
+       
+       a += 1
+    }
+     
+  end 
 end 
