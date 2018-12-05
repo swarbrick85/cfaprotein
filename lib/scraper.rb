@@ -53,4 +53,23 @@ class Scraper
      
   end 
   
+  def create_salads_menu
+    a = 0 
+    4.times{
+      if (front_page.css("td")[367 + (11 * a)].text != "0")
+         x = Item.new 
+         Item.salads_all << x 
+         z = front_page.css("td")[357 + (11 * a)].text 
+         z[0...11] = ""
+         x.name = z 
+         x.calories = front_page.css("td")[358 + (11 * a)].text
+         x.fat = front_page.css("td")[359 + (11 * a)].text
+         x.total_carbs = front_page.css("td")[364 + (11 * a)].text
+         x.sugar = front_page.css("td")[366 + (11 * a)].text
+         x.protein = front_page.css("td")[367 + (11 * a)].text
+         a += 1
+       end 
+    }
+     
+  end 
 end 
