@@ -13,14 +13,8 @@ class Scraper
     binding.pry 
   end 
   
-  def create_from_page 
-    
-    
-    
-  end 
+  
   
   
   
 end 
-
-# for wwww, the first item is on "a" 15
