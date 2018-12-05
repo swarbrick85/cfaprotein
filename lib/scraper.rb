@@ -31,14 +31,14 @@ class Scraper
     a = 0 
     17.times{
     x = Item.new 
-    y = Item.breakfast_all
+    y = Item.entrees_all
     y << x 
     z = front_page.css("td")[169 + (11 * a)].text 
     z[0...11] = ""
     x.name = z 
     a += 1
     }
-    binding.pry  
+    
   end 
   
 end 
