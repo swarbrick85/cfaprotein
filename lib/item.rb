@@ -16,4 +16,7 @@ class Item
   @@drinks_all = []
   
   
+  def breakfast_all
+    @@breakfast_all
+  end
 end 
