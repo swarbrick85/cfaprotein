@@ -2,12 +2,12 @@ require "cfaprotein/version"
 
 module Cfaprotein
   class Error < StandardError; end
-  def menu
+  def create_menu
     a = 0 
     b.times{
       if (front_page.css("td")[c + 10 + (11 * a)].text != "0")
          x = Item.new 
-         Item.breakfast_all << x 
+         Item."#{d}"_all << x 
          z = front_page.css("td")[c + (11 * a)].text 
          z[0...11] = ""
          x.name = z 
