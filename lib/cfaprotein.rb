@@ -32,6 +32,7 @@ module Cfaprotein
     x.pct_cal_by_sc = (((x.sugar * 4)/x.calories) * 100).round(2)
     x.pct_cal_by_cc = (((x.complex_carbs * 4)/x.calories) * 100).round(2)
     x.pct_cal_by_tc = (((x.total_carbs * 4)/x.calories) * 100).round(2)
+    x.cal_per_protein = (x.calories/x.protein).round(2)
     
   end 
 end
