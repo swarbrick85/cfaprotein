@@ -17,11 +17,14 @@ class Scraper
     a = 0 
     15.times{
     x = Item.new 
-    y = Item.breakfast_all
-    y << x 
+    Item.breakfast_all << x 
     z = front_page.css("td")[3 + (11 * a)].text 
     z[0...11] = ""
     x.name = z 
+    x.calories = front_page.css("td")[4 + (11 * a)].text
+    x.fat = front_page.css("td")[5 + (11 * a)].text
+    x.total_carbs = front_page.css("td")[10 + (11 * a)].text
+    x.sugar
     a += 1
     }
      
