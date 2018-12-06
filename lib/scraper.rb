@@ -42,26 +42,7 @@ class Scraper
   end 
   
   def create_drinks_menu
-    b = 33
-    c = 712
-    a = 0 
-    b.times{
-      if (front_page.css("td")[c + 10 + (@row_width * a)].text != "0")
-         x = Item.new 
-         Item.drinks_all << x 
-         z = front_page.css("td")[c + (@row_width * a)].text 
-         z[0...11] = ""
-         x.name = z 
-         x.calories = front_page.css("td")[c + 1 + (@row_width * a)].text
-         x.fat = front_page.css("td")[c + 2 + (@row_width * a)].text
-         x.total_carbs = front_page.css("td")[c + 7 + (@row_width * a)].text
-         x.sugar = front_page.css("td")[c + 9 + (@row_width * a)].text
-         x.protein = front_page.css("td")[c + 10 + (@row_width * a)].text
-       end 
-       
-       a += 1
-    }
-     
+    create_menu(33, 712, Item.drinks_all)
   end 
 end  
  
