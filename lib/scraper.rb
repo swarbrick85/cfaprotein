@@ -30,7 +30,7 @@ class Scraper
   end 
   
   def create_salads_menu
-     create_menu(4, 357, Items.salads_all)
+     create_menu(4, 357, Item.salads_all)
   end 
   
   def create_sides_menu
