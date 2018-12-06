@@ -31,7 +31,7 @@ class Scraper
      b.times{
       if (front_page.css("td")[c + 10 + (@row_width * a)].text != "0")
          x = Item.new 
-         Item.drinks_all << x 
+         Item.breakfast_all << x 
          z = front_page.css("td")[c + (@row_width * a)].text 
          z[0...11] = ""
          x.name = z 
@@ -65,7 +65,7 @@ class Scraper
      b.times{
       if (front_page.css("td")[c + 10 + (@row_width * a)].text != "0")
          x = Item.new 
-         Item.drinks_all << x 
+         Item.entrees_all << x 
          z = front_page.css("td")[c + (@row_width * a)].text 
          z[0...11] = ""
          x.name = z 
@@ -89,7 +89,7 @@ class Scraper
      b.times{
       if (front_page.css("td")[c + 10 + (@row_width * a)].text != "0")
          x = Item.new 
-         Item.drinks_all << x 
+         Item.salads_all << x 
          z = front_page.css("td")[c + (@row_width * a)].text 
          z[0...11] = ""
          x.name = z 
@@ -114,7 +114,7 @@ class Scraper
      b.times{
       if (front_page.css("td")[c + 10 + (@row_width * a)].text != "0")
          x = Item.new 
-         Item.drinks_all << x 
+         Item.sides_all << x 
          z = front_page.css("td")[c + (@row_width * a)].text 
          z[0...11] = ""
          x.name = z 
@@ -139,7 +139,7 @@ class Scraper
      b.times{
       if (front_page.css("td")[c + 10 + (@row_width * a)].text != "0")
          x = Item.new 
-         Item.drinks_all << x 
+         Item.treats_all << x 
          z = front_page.css("td")[c + (@row_width * a)].text 
          z[0...11] = ""
          x.name = z 
