@@ -22,59 +22,15 @@ class Scraper
    
   
   def create_breakfast_menu
-    
-    
     create_menu(15, 3, Item.breakfast_all)
-     
   end 
   
   def create_entrees_menu
-   
-   b = 17 
-   c = 169
-   
-    a = 0 
-     b.times{
-      if (front_page.css("td")[c + 10 + (@row_width * a)].text != "0")
-         x = Item.new 
-         Item.entrees_all << x 
-         z = front_page.css("td")[c + (@row_width * a)].text 
-         z[0...11] = ""
-         x.name = z 
-         x.calories = front_page.css("td")[c + 1 + (@row_width * a)].text
-         x.fat = front_page.css("td")[c + 2 + (@row_width * a)].text
-         x.total_carbs = front_page.css("td")[c + 7 + (@row_width * a)].text
-         x.sugar = front_page.css("td")[c + 9 + (@row_width * a)].text
-         x.protein = front_page.css("td")[c + 10 + (@row_width * a)].text
-       end 
-       
-       a += 1
-    }
-     
+    create_menu(17, 169, Item.entrees_all)
   end 
   
   def create_salads_menu
-    
-    b = 4 
-    c = 357 
-    
-     b.times{
-      if (front_page.css("td")[c + 10 + (@row_width * a)].text != "0")
-         x = Item.new 
-         Item.salads_all << x 
-         z = front_page.css("td")[c + (@row_width * a)].text 
-         z[0...11] = ""
-         x.name = z 
-         x.calories = front_page.css("td")[c + 1 + (@row_width * a)].text
-         x.fat = front_page.css("td")[c + 2 + (@row_width * a)].text
-         x.total_carbs = front_page.css("td")[c + 7 + (@row_width * a)].text
-         x.sugar = front_page.css("td")[c + 9 + (@row_width * a)].text
-         x.protein = front_page.css("td")[c + 10 + (@row_width * a)].text
-       end 
-       
-       a += 1
-    }
-     
+     create_menu(4, 357, Items.salads_all)
   end 
   
   def create_sides_menu
