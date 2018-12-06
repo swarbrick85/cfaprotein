@@ -23,30 +23,43 @@ class Scraper
   
   def create_breakfast_menu
     create_menu(15, 3, Item.breakfast_all)
+    nil
   end 
   
   def create_entrees_menu
     create_menu(17, 169, Item.entrees_all)
+    nil
   end 
   
   def create_salads_menu
      create_menu(4, 357, Item.salads_all)
+     nil
   end 
   
   def create_sides_menu
     create_menu(10, 402, Item.sides_all)
+    nil
   end 
   
   def create_treats_menu
     create_menu(18, 513, Item.treats_all)
+    nil
   end 
   
   def create_drinks_menu
     create_menu(33, 712, Item.drinks_all)
+    nil
   end 
   
-  def entire_menu 
-    Item.all 
+  
+  def create_entire_menu 
+    create_breakfast_menu
+    create_entrees_menu
+    create_salads_menu
+    create_sides_menu
+    create_treats_menu
+    create_drinks_menu
+    nil
   end 
 end  
  
