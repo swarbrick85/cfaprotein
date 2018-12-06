@@ -35,7 +35,7 @@ module Cfaprotein
        
       a += 1
     }
-     
+    all_class_variable
   end
   
   def calculate 
