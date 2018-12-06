@@ -116,6 +116,7 @@ Module clifunctions
       puts "I'm sorry, that's not an option here."
       list_menus 
     end
+  end 
 
   def display_item(item) 
     puts "#{item.name}"
