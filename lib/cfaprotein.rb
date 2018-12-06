@@ -8,7 +8,7 @@ module Cfaprotein
    
   end
   
-  def create_menu(b, c, item_all_class_variable)
+  def create_menu(b, c, item_all_class_variable, item_all_original_class_variable)
     
       # b is number of items in that menu section 
     # c is the location of the first name of the first item in that menu section 
@@ -19,6 +19,7 @@ module Cfaprotein
       if (front_page.css("td")[c + 10 + (@row_width * a)].text != "0")
          x = Item.new 
          item_all_class_variable << x 
+         item_all_original_class_variable << x
          Item.all << x 
          z = front_page.css("td")[c + (@row_width * a)].text 
          z[0...11] = ""

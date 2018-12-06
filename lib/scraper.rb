@@ -22,27 +22,27 @@ class Scraper
    
   
   def create_breakfast_menu
-    create_menu(15, 3, Item.breakfast_all)
+    create_menu(15, 3, Item.breakfast_all, Item.breakfast_all_orig)
   end 
   
   def create_entrees_menu
-    create_menu(17, 169, Item.entrees_all)
+    create_menu(17, 169, Item.entrees_all, Item.entrees_all_orig)
   end 
   
   def create_salads_menu
-     create_menu(4, 357, Item.salads_all)
+     create_menu(4, 357, Item.salads_all, Item.salads_all_orig)
   end 
   
   def create_sides_menu
-    create_menu(10, 402, Item.sides_all)
+    create_menu(10, 402, Item.sides_all, Item.sides_all_orig)
   end 
   
   def create_treats_menu
-    create_menu(18, 513, Item.treats_all)
+    create_menu(18, 513, Item.treats_all, Item.treats_all_orig)
   end 
   
   def create_drinks_menu
-    create_menu(33, 712, Item.drinks_all)
+    create_menu(33, 712, Item.drinks_all, Item.drinks_all_orig)
   end 
   
   
