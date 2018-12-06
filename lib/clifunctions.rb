@@ -30,7 +30,7 @@ Module clifunctions
     puts "  2. I'd like to compare items."
     x = gets.strip
     if x == 1 
-      list_menus
+      individual_item_path
     elsif x == 2 
       comparing_menu 
     else 
@@ -39,7 +39,7 @@ Module clifunctions
     end 
   end 
 
-  def list_menus 
+  def individual_item_path 
     puts "Please select from the following menu options:"
     puts "1.  Entrees Menu"
     puts "2.  Salads Menu"
@@ -87,5 +87,8 @@ Module clifunctions
     gets
     start
   end 
-
+  
+   
+    
+  end 
 end 
