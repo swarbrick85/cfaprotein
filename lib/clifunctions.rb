@@ -52,12 +52,44 @@ Module clifunctions
     
     if x == 1 
       display_menu(Item.entrees_all_orig)
+        y = gets.strip 
+        a = 1 
+          17.times {
+            if y == a 
+              display_item(Item.entrees_all_orig[a-1])
+              a += 1
+            end 
+          }
     elsif x == 2 
       display_menu(Item.salads_all_orig)
+        z = gets.strip 
+        b = 1 
+          4.times {
+            if z == b 
+              display_item(Item.salads_all_orig[b-1])
+              b += 1
+            end 
+          }
     elsif x == 3 
       display_menu(Item.sides_all_orig)
+        w = gets.strip 
+        c = 1 
+          8.times {
+            if w == c 
+              display_item(Item.salads_all_orig[c-1])
+              c += 1
+            end 
+          }
     elsif x == 4 
       display_menu(Item.treats_all_orig)
+        v = gets.strip 
+        d = 1 
+          18.times {
+            if v == d 
+              display_item(Item.salads_all_orig[a-1])
+              b += 1
+            end 
+          }
     elsif x == 5 
       display_menu(Item.drinks_all_orig)
     elsif x == 6 
