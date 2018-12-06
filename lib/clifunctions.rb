@@ -86,14 +86,30 @@ Module clifunctions
         d = 1 
           18.times {
             if v == d 
-              display_item(Item.salads_all_orig[a-1])
-              b += 1
+              display_item(Item.salads_all_orig[d-1])
+              d += 1
             end 
           }
     elsif x == 5 
       display_menu(Item.drinks_all_orig)
+        u = gets.strip 
+        e = 1 
+          7.times {
+            if u == e 
+              display_item(Item.salads_all_orig[e-1])
+              e += 1
+            end 
+          }
     elsif x == 6 
       display_menu(Item.breakfast_all_orig)
+        t = gets.strip 
+        f = 1 
+          15.times {
+            if t == f 
+              display_item(Item.salads_all_orig[f-1])
+              f += 1
+            end 
+          }
     elsif x == 30 
       start 
     else 
