@@ -16,6 +16,14 @@ class Item
   @@drinks_all = []
   @@all = []
   
+  @@breakfast_all_orig = []
+  @@entrees_all_orig = []
+  @@salads_all_orig = []
+  @@sides_all_orig = []
+  @@treats_all_orig = []
+  @@drinks_all_orig = []
+  @@all_orig = []
+  
   def self.breakfast_all
     @@breakfast_all
   end
@@ -52,5 +60,12 @@ class Item
     @@treats_all = []
     @@drinks_all = []
     @@all = []
+    @@breakfast_all_orig = []
+    @@entrees_all_orig = []
+    @@salads_all_orig = []
+    @@sides_all_orig = []
+    @@treats_all_orig = []
+    @@drinks_all_orig = []
+    @@all_orig = []
   end
 end 

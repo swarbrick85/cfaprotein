@@ -6,6 +6,8 @@ Module clifunctions
       a += 1 
     end 
   end 
+  
+  def display_sorted
 
 
 
