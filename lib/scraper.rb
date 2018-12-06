@@ -50,19 +50,23 @@ class Scraper
   end 
   
   def create_entrees_menu
+   
+   b = 17 
+   c = 169
+   
     a = 0 
-    17.times{
-      if (front_page.css("td")[179 + (@row_width * a)].text != "0")
+     b.times{
+      if (front_page.css("td")[c + 10 + (@row_width * a)].text != "0")
          x = Item.new 
-         Item.entrees_all << x 
-         z = front_page.css("td")[169 + (@row_width * a)].text 
+         Item.drinks_all << x 
+         z = front_page.css("td")[c + (@row_width * a)].text 
          z[0...11] = ""
          x.name = z 
-         x.calories = front_page.css("td")[170 + (@row_width * a)].text
-         x.fat = front_page.css("td")[171 + (@row_width * a)].text
-         x.total_carbs = front_page.css("td")[176 + (@row_width * a)].text
-         x.sugar = front_page.css("td")[178 + (@row_width * a)].text
-         x.protein = front_page.css("td")[179 + (@row_width * a)].text
+         x.calories = front_page.css("td")[c + 1 + (@row_width * a)].text
+         x.fat = front_page.css("td")[c + 2 + (@row_width * a)].text
+         x.total_carbs = front_page.css("td")[c + 7 + (@row_width * a)].text
+         x.sugar = front_page.css("td")[c + 9 + (@row_width * a)].text
+         x.protein = front_page.css("td")[c + 10 + (@row_width * a)].text
        end 
        
        a += 1
@@ -71,19 +75,22 @@ class Scraper
   end 
   
   def create_salads_menu
-    a = 0 
-    4.times{
-      if (front_page.css("td")[367 + (@row_width * a)].text != "0")
+    
+    b = 4 
+    c = 357 
+    
+     b.times{
+      if (front_page.css("td")[c + 10 + (@row_width * a)].text != "0")
          x = Item.new 
-         Item.salads_all << x 
-         z = front_page.css("td")[357 + (@row_width * a)].text 
+         Item.drinks_all << x 
+         z = front_page.css("td")[c + (@row_width * a)].text 
          z[0...11] = ""
          x.name = z 
-         x.calories = front_page.css("td")[358 + (@row_width * a)].text
-         x.fat = front_page.css("td")[359 + (@row_width * a)].text
-         x.total_carbs = front_page.css("td")[364 + (@row_width * a)].text
-         x.sugar = front_page.css("td")[366 + (@row_width * a)].text
-         x.protein = front_page.css("td")[367 + (@row_width * a)].text
+         x.calories = front_page.css("td")[c + 1 + (@row_width * a)].text
+         x.fat = front_page.css("td")[c + 2 + (@row_width * a)].text
+         x.total_carbs = front_page.css("td")[c + 7 + (@row_width * a)].text
+         x.sugar = front_page.css("td")[c + 9 + (@row_width * a)].text
+         x.protein = front_page.css("td")[c + 10 + (@row_width * a)].text
        end 
        
        a += 1
@@ -92,19 +99,23 @@ class Scraper
   end 
   
   def create_sides_menu
+    
+    b = 10 
+    c = 402
+    
     a = 0 
-    10.times{
-      if (front_page.css("td")[412 + (@row_width * a)].text != "0")
+     b.times{
+      if (front_page.css("td")[c + 10 + (@row_width * a)].text != "0")
          x = Item.new 
-         Item.sides_all << x 
-         z = front_page.css("td")[402 + (@row_width * a)].text 
+         Item.drinks_all << x 
+         z = front_page.css("td")[c + (@row_width * a)].text 
          z[0...11] = ""
          x.name = z 
-         x.calories = front_page.css("td")[403 + (@row_width * a)].text
-         x.fat = front_page.css("td")[404 + (@row_width * a)].text
-         x.total_carbs = front_page.css("td")[409 + (@row_width * a)].text
-         x.sugar = front_page.css("td")[411 + (@row_width * a)].text
-         x.protein = front_page.css("td")[412 + (@row_width * a)].text
+         x.calories = front_page.css("td")[c + 1 + (@row_width * a)].text
+         x.fat = front_page.css("td")[c + 2 + (@row_width * a)].text
+         x.total_carbs = front_page.css("td")[c + 7 + (@row_width * a)].text
+         x.sugar = front_page.css("td")[c + 9 + (@row_width * a)].text
+         x.protein = front_page.css("td")[c + 10 + (@row_width * a)].text
        end 
        
        a += 1
@@ -113,23 +124,29 @@ class Scraper
   end 
   
   def create_treats_menu
+   
+    b = 18
+    c = 513
+   
     a = 0 
-    18.times{
-      if (front_page.css("td")[523 + (@row_width * a)].text != "0")
+     b.times{
+      if (front_page.css("td")[c + 10 + (@row_width * a)].text != "0")
          x = Item.new 
-         Item.treats_all << x 
-         z = front_page.css("td")[513 + (@row_width * a)].text 
+         Item.drinks_all << x 
+         z = front_page.css("td")[c + (@row_width * a)].text 
          z[0...11] = ""
          x.name = z 
-         x.calories = front_page.css("td")[514 + (@row_width * a)].text
-         x.fat = front_page.css("td")[515 + (@row_width * a)].text
-         x.total_carbs = front_page.css("td")[520 + (@row_width * a)].text
-         x.sugar = front_page.css("td")[522 + (@row_width * a)].text
-         x.protein = front_page.css("td")[523 + (@row_width * a)].text
+         x.calories = front_page.css("td")[c + 1 + (@row_width * a)].text
+         x.fat = front_page.css("td")[c + 2 + (@row_width * a)].text
+         x.total_carbs = front_page.css("td")[c + 7 + (@row_width * a)].text
+         x.sugar = front_page.css("td")[c + 9 + (@row_width * a)].text
+         x.protein = front_page.css("td")[c + 10 + (@row_width * a)].text
        end 
        
        a += 1
     }
+       
+
      
   end 
   
