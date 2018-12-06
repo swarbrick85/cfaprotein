@@ -7,7 +7,13 @@ Module clifunctions
     end 
   end 
   
-  def display_sorted
+  def sort_asc(item_all_class_variable, attribute)
+    item_all_class_variable.sort_by {|item| item.attribute}
+  end
+  
+  def sort_desc(item_all_class_variable, attribute)
+    (item_all_class_variable.sort_by {|item| item.attribute}).reverse 
+  end
 
 
 
