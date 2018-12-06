@@ -40,12 +40,13 @@ Module clifunctions
 
   def list_menus 
     puts "Please select from the following menu options:"
-    puts "1. Entrees Menu"
-    puts "2. Salads Menu"
-    puts "3. Sides Menu"
-    puts "4. Treats Menu"
-    puts "5. Drinks Menu"
-    puts "6. Breakfast Menu"
+    puts "1.  Entrees Menu"
+    puts "2.  Salads Menu"
+    puts "3.  Sides Menu"
+    puts "4.  Treats Menu"
+    puts "5.  Drinks Menu"
+    puts "6.  Breakfast Menu"
+    puts "30. Start the app over"
     x = gets.strip 
     
     if x == 1 
@@ -60,7 +61,12 @@ Module clifunctions
       display_menu(Item.drinks_all)
     elsif x == 6 
       display_menu(Item.breakfast_all)
-
+    elsif x == 30 
+      start 
+    else 
+      puts "I'm sorry, that's not an option here."
+      list_menus 
+    end
 
 
 
