@@ -1,6 +1,7 @@
 Module clifunctions 
   def display_menu(item_all_class_variable)
     a = 1 
+    puts "Please select one of the following options:"
     item_all_class_variable.each do |item|
       puts "#{a}. #{item.name}"
       a += 1 
@@ -23,7 +24,7 @@ Module clifunctions
     puts "If you make a selection and are returned to a prior menu, it means:"
     puts "  1. There are no items within the parameters you set out."
     puts "  2. You made an invalid entry of some kind."
-    puts "  3. Our app is out of date. Please feel free to email us at"
+    puts "  3. Our app is out of date. Please feel free to email us at..."
     puts "Please make a selection from the following:"
     puts "  1. I'd like to look at individual menu items."
     puts "  2. I'd like to compare items."
@@ -50,17 +51,17 @@ Module clifunctions
     x = gets.strip 
     
     if x == 1 
-      display_menu(Item.entrees_all)
+      display_menu(Item.entrees_all_orig)
     elsif x == 2 
-      display_menu(Item.salads_all)
+      display_menu(Item.salads_all_orig)
     elsif x == 3 
-      display_menu(Item.sides_all)
+      display_menu(Item.sides_all_orig)
     elsif x == 4 
-      display_menu(Item.treats_all)
+      display_menu(Item.treats_all_orig)
     elsif x == 5 
-      display_menu(Item.drinks_all)
+      display_menu(Item.drinks_all_orig)
     elsif x == 6 
-      display_menu(Item.breakfast_all)
+      display_menu(Item.breakfast_all_orig)
     elsif x == 30 
       start 
     else 
