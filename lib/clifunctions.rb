@@ -75,7 +75,13 @@ Module clifunctions
     puts "#{item.calories} calories"
     puts "#{item.fat}g fat"
     puts "#{item.complex_carbs}g complex carbs"
-    puts "#{item."
+    puts "#{item.sugar}g sugar"
+    puts "#{item.total_carbs}g total carbs"
+    puts "#{item.pct_cal_by_protein}% of calories from protein"
+    puts "#{item.pct_cal_by_fat}% of calories from fat"
+    puts "#{item.pct_cal_by_cc}% of calories from complex carbs"
+    puts "#{item.pct_cal_by_sc}% of calories from sugar"
+    puts "#{item.pct_cal_by_tc}% of calories from total carbs"
   end 
 
 end 
