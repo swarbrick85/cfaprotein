@@ -43,4 +43,14 @@ class Item
   def self.all 
     @@all 
   end   
+  
+  def clear_all 
+    @@breakfast_all = []
+    @@entrees_all = [] 
+    @@salads_all = []
+    @@sides_all = []
+    @@treats_all = []
+    @@drinks_all = []
+    @@all = []
+  end
 end 
