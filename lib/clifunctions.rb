@@ -49,7 +49,17 @@ Module clifunctions
     x = gets.strip 
     
     if x == 1 
-      
+      display_menu(Item.entrees_all)
+    elsif x == 2 
+      display_menu(Item.salads_all)
+    elsif x == 3 
+      display_menu(Item.sides_all)
+    elsif x == 4 
+      display_menu(Item.treats_all)
+    elsif x == 5 
+      display_menu(Item.drinks_all)
+    elsif x == 6 
+      display_menu(Item.breakfast_all)
 
 
 
