@@ -27,10 +27,29 @@ Module clifunctions
     puts "Please make a selection from the following:"
     puts "  1. I'd like to look at individual menu items."
     puts "  2. I'd like to compare items."
-    
+    x = gets.strip
+    if x == 1 
+      list_menus
+    elsif x == 2 
+      comparing_menu 
+    else 
+      puts "I'm sorry, that's not an option here."
+      start 
+    end 
   end 
 
-
+  def list_menus 
+    puts "Please select from the following menu options:"
+    puts "1. Entrees Menu"
+    puts "2. Salads Menu"
+    puts "3. Sides Menu"
+    puts "4. Treats Menu"
+    puts "5. Drinks Menu"
+    puts "6. Breakfast Menu"
+    x = gets.strip 
+    
+    if x == 1 
+      
 
 
 
