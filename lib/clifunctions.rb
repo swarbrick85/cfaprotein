@@ -69,6 +69,13 @@ Module clifunctions
       list_menus 
     end
 
-
+  def display_item(item) 
+    puts "#{item.name}"
+    puts "#{item.protein}g protein"
+    puts "#{item.calories} calories"
+    puts "#{item.fat}g fat"
+    puts "#{item.complex_carbs}g complex carbs"
+    puts "#{item."
+  end 
 
 end 
