@@ -17,6 +17,9 @@ class Scraper
   
   def initialize 
     @row_width = 11 
+    # b is number of items in that menu section 
+    # c is the location of the first name of the first item in that menu section 
+    # @row_width tells you how many spots are in each item's row, so to move from name to name within a menu section add @row_width. Same for protein to protein, etc. 
   end 
   
   def create_breakfast_menu
