@@ -14,7 +14,7 @@ class Item
   @@sides_all = []
   @@treats_all = []
   @@drinks_all = []
-  
+  @@all = []
   
   def self.breakfast_all
     @@breakfast_all
@@ -39,4 +39,8 @@ class Item
   def self.drinks_all
     @@drinks_all
   end
+  
+  def self.all 
+    @@all 
+  end   
 end 

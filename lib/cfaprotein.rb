@@ -19,6 +19,7 @@ module Cfaprotein
       if (front_page.css("td")[c + 10 + (@row_width * a)].text != "0")
          x = Item.new 
          all_class_variable << x 
+         Item.all << x 
          z = front_page.css("td")[c + (@row_width * a)].text 
          z[0...11] = ""
          x.name = z 

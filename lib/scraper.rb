@@ -44,5 +44,9 @@ class Scraper
   def create_drinks_menu
     create_menu(33, 712, Item.drinks_all)
   end 
+  
+  def entire_menu 
+    Item.all 
+  end 
 end  
  
