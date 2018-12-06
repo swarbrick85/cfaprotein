@@ -7,6 +7,7 @@ require 'pry'
 
 class Scraper 
   
+  include Clifunctions
   include Cfaprotein 
   attr_accessor :row_width
   
