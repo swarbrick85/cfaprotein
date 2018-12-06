@@ -3,6 +3,11 @@ require "cfaprotein/version"
 module Cfaprotein
   class Error < StandardError; end
   
+  def initialize 
+    @row_width = 11 
+   
+  end
+  
   def create_menu(b, c, all_class_variable)
     
       # b is number of items in that menu section 
