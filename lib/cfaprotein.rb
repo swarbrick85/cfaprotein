@@ -3,26 +3,40 @@ require "cfaprotein/version"
 module Cfaprotein
   class Error < StandardError; end
   
-#  def create_menu
-#    a = 0 
-#    b.times{
-#      if (front_page.css("td")[c + 10 + (11 * a)].text != "0")
-#         x = Item.new 
-#         Item."#{d}"_all << x 
-#         z = front_page.css("td")[c + (11 * a)].text 
-#         z[0...11] = ""
-#         x.name = z 
-#         x.calories = front_page.css("td")[c + 1 + (11 * a)].text
-#         x.fat = front_page.css("td")[c + 2 + (11 * a)].text
-#         x.total_carbs = front_page.css("td")[c + 7 + (11 * a)].text
-#         x.sugar = front_page.css("td")[12 + (c + 9 * a)].text
-#         x.protein = front_page.css("td")[c + 10 + (11 * a)].text
-#       end 
-#       
-#      a += 1
-#    }
-#     
-#  end
+  def create_menu(b, c, all_class_variable)
+    
+      # b is number of items in that menu section 
+    # c is the location of the first name of the first item in that menu section 
+    # @row_width tells you how many spots are in each item's row, so to move from name to name within a menu section add @row_width. Same for protein to protein, etc. 
+    
+    a = 0 
+     b.times{
+      if (front_page.css("td")[c + 10 + (@row_width * a)].text != "0")
+         x = Item.new 
+         all_class_variable << x 
+         z = front_page.css("td")[c + (@row_width * a)].text 
+         z[0...11] = ""
+         x.name = z 
+         x.calories = front_page.css("td")[c + 1 + (@row_width * a)].text.to_f.round(1)
+         x.fat = front_page.css("td")[c + 2 + (@row_width * a)].text.to_f.round(1)
+         x.total_carbs = front_page.css("td")[c + 7 + (@row_width * a)].text.to_f.round(1)
+         x.sugar = front_page.css("td")[c + 9 + (@row_width * a)].text.to_f.round(1)
+         x.protein = front_page.css("td")[c + 10 + (@row_width * a)].text.to_f.round(1)
+        
+         x.complex_carbs = (x.total_carbs - x.sugar).to_f.round(1)
+        
+         x.pct_cal_by_protein = (((x.protein * 4)/x.calories) * 100).round(1)
+         x.pct_cal_by_fat = (((x.fat * 9)/x.calories) * 100).round(1)
+         x.pct_cal_by_sc = (((x.sugar * 4)/x.calories) * 100).round(1)
+         x.pct_cal_by_cc = (((x.complex_carbs * 4)/x.calories) * 100).round(1)
+         x.pct_cal_by_tc = (((x.total_carbs * 4)/x.calories) * 100).round(1)
+         x.cal_per_protein = (x.calories/x.protein).round(1)  
+       end 
+       
+      a += 1
+    }
+     
+  end
   
   def calculate 
     
