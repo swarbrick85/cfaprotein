@@ -84,7 +84,7 @@ Module clifunctions
     puts "#{item.pct_cal_by_tc}% of calories from total carbs"
     puts " "
     puts "To return to the beginning of the app, enter anything."
-    gets.strip
+    gets
     start
   end 
 
