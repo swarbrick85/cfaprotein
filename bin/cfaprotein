@@ -2,6 +2,7 @@
 
 require_relative './config/environment.rb'
 
-
-
-start 
+x = Scraper.new 
+Item.clear_all
+x.create_entire_menu
+x.start

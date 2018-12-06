@@ -52,7 +52,7 @@ class Item
     @@all 
   end   
   
-  def clear_all 
+  def self.clear_all 
     @@breakfast_all = []
     @@entrees_all = [] 
     @@salads_all = []
