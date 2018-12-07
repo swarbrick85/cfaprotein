@@ -32,9 +32,9 @@ class Cli
     puts "  1. I'd like to look at individual menu items."
     puts "  2. I'd like to compare items."
     x = gets.strip
-    if x == 1 
+    if x == "1" 
       individual_item_path
-    elsif x == 2 
+    elsif x == "2" 
       comparing_menu 
     else 
       puts "I'm sorry, that's not an option here."
