@@ -1,4 +1,4 @@
-require "cfaprotein/version"
+require "versionfile/version"
 
 module Cfaprotein
   class Error < StandardError; end
