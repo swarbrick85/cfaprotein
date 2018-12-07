@@ -60,8 +60,8 @@ class Cli
           17.times {
             if y == a 
               display_item(Item.entrees_all_orig[a-1])
-              a += 1
             end 
+            a += 1
           }
     elsif x == 2 
       display_menu(Item.salads_all_orig)
@@ -70,8 +70,8 @@ class Cli
           4.times {
             if z == b 
               display_item(Item.salads_all_orig[b-1])
-              b += 1
             end 
+            b += 1
           }
     elsif x == 3 
       display_menu(Item.sides_all_orig)
@@ -80,8 +80,8 @@ class Cli
           8.times {
             if w == c 
               display_item(Item.salads_all_orig[c-1])
-              c += 1
             end 
+            c += 1
           }
     elsif x == 4 
       display_menu(Item.treats_all_orig)
@@ -90,8 +90,8 @@ class Cli
           18.times {
             if v == d 
               display_item(Item.salads_all_orig[d-1])
-              d += 1
             end 
+            d += 1
           }
     elsif x == 5 
       display_menu(Item.drinks_all_orig)
@@ -100,8 +100,8 @@ class Cli
           7.times {
             if u == e 
               display_item(Item.salads_all_orig[e-1])
-              e += 1
             end 
+            e += 1
           }
     elsif x == 6 
       display_menu(Item.breakfast_all_orig)
@@ -110,8 +110,8 @@ class Cli
           15.times {
             if t == f 
               display_item(Item.salads_all_orig[f-1])
-              f += 1
             end 
+            f += 1
           }
     elsif x == 30 
       start 
