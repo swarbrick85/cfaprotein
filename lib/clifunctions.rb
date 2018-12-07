@@ -1,3 +1,9 @@
+require_relative './environment.rb'
+
+require 'nokogiri'
+require 'open-uri'
+require 'pry'
+
 Module clifunctions 
   def display_menu(item_all_class_variable)
     a = 1 
