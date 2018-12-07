@@ -51,11 +51,11 @@ class Cli
     puts "5.  Drinks Menu"
     puts "6.  Breakfast Menu"
     puts "30. Start the app over"
-    x = gets.strip 
+    x = gets.strip.to_i 
     
     if x == 1 
       display_menu(Item.entrees_all_orig)
-        y = gets.strip 
+        y = gets.strip.to_i  
         a = 1 
           17.times {
             if y == a 
@@ -65,7 +65,7 @@ class Cli
           }
     elsif x == 2 
       display_menu(Item.salads_all_orig)
-        z = gets.strip 
+        z = gets.strip.to_i 
         b = 1 
           4.times {
             if z == b 
@@ -75,7 +75,7 @@ class Cli
           }
     elsif x == 3 
       display_menu(Item.sides_all_orig)
-        w = gets.strip 
+        w = gets.strip.to_i 
         c = 1 
           8.times {
             if w == c 
@@ -85,7 +85,7 @@ class Cli
           }
     elsif x == 4 
       display_menu(Item.treats_all_orig)
-        v = gets.strip 
+        v = gets.strip.to_i 
         d = 1 
           18.times {
             if v == d 
@@ -95,7 +95,7 @@ class Cli
           }
     elsif x == 5 
       display_menu(Item.drinks_all_orig)
-        u = gets.strip 
+        u = gets.strip.to_i 
         e = 1 
           7.times {
             if u == e 
@@ -105,7 +105,7 @@ class Cli
           }
     elsif x == 6 
       display_menu(Item.breakfast_all_orig)
-        t = gets.strip 
+        t = gets.strip.to_i 
         f = 1 
           15.times {
             if t == f 
