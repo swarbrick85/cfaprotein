@@ -1,4 +1,4 @@
-module Cfaprotein
+module Dry 
   class Error < StandardError; end
   
   def initialize 
