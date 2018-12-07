@@ -52,9 +52,9 @@ class Cli
     puts "5.  Drinks Menu"
     puts "6.  Breakfast Menu"
     puts "30. Start the app over"
-    x = gets.strip.to_i 
+    x = gets.strip 
     
-    if x == 1 
+    if x == "1" 
       display_menu(Item.entrees_all_orig)
         y = gets.strip.to_i  
         a = 1 
@@ -64,7 +64,7 @@ class Cli
             end 
             a += 1
           }
-    elsif x == 2 
+    elsif x == "2" 
       display_menu(Item.salads_all_orig)
         z = gets.strip.to_i 
         b = 1 
@@ -74,7 +74,7 @@ class Cli
             end 
             b += 1
           }
-    elsif x == 3 
+    elsif x == "3" 
       display_menu(Item.sides_all_orig)
         w = gets.strip.to_i 
         c = 1 
@@ -84,7 +84,7 @@ class Cli
             end 
             c += 1
           }
-    elsif x == 4 
+    elsif x == "4" 
       display_menu(Item.treats_all_orig)
         v = gets.strip.to_i 
         d = 1 
@@ -94,7 +94,7 @@ class Cli
             end 
             d += 1
           }
-    elsif x == 5 
+    elsif x == "5" 
       display_menu(Item.drinks_all_orig)
         u = gets.strip.to_i 
         e = 1 
@@ -104,7 +104,7 @@ class Cli
             end 
             e += 1
           }
-    elsif x == 6 
+    elsif x == "6" 
       display_menu(Item.breakfast_all_orig)
         t = gets.strip.to_i 
         f = 1 
@@ -115,7 +115,7 @@ class Cli
             f += 1
           }
           
-    elsif x == 30 
+    elsif x == "30" 
       start 
     else 
       puts "I'm sorry, that's not an option here."
