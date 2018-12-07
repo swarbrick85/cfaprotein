@@ -117,7 +117,7 @@ class Cli
       start 
     else 
       puts "I'm sorry, that's not an option here."
-      list_menus 
+      individual_item_path 
     end
   end 
 
