@@ -84,7 +84,11 @@ class Cli
           }
     elsif x == "3" 
       display_menu(Item.sides_all_orig)
-        w = gets.strip.to_i 
+        w = gets.strip.to_f  
+          until (w is_a? Integer && (w > 0 && w < 9)) || w == 30
+            display_menu(Item.entrees_all_orig)
+            w = gets.strip.to_f
+          end  
         c = 1 
           8.times {
             if w == c 
