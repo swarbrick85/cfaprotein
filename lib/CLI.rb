@@ -1,3 +1,5 @@
+require_relative './cfaprotein.rb'
+
 class Cli 
   
   def display_menu(item_all_class_variable)
