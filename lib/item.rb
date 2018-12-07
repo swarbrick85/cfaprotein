@@ -49,6 +49,34 @@ class Item
     @@all 
   end   
   
+  def self.breakfast_all
+    @@breakfast_all
+  end
+  
+  def self.entrees_all
+    @@entrees_all
+  end
+  
+  def self.salads_all
+    @@salads_all
+  end
+  
+  def self.sides_all
+    @@sides_all
+  end
+  
+  def self.treats_all
+    @@treats_all
+  end
+  
+  def self.drinks_all
+    @@drinks_all
+  end
+  
+  def self.all 
+    @@all 
+  end   
+  
   def self.clear_all 
     @@breakfast_all = []
     @@entrees_all = [] 
