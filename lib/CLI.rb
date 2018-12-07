@@ -57,7 +57,7 @@ class Cli
     if x == "1" 
       display_menu(Item.entrees_all_orig)
       y = gets.strip.to_f  
-        until (y.is_a? Integer && (y > 0 && y < 18)) || y == 30
+        until (y.to_f == y.to_i Integer && (y > 0 && y < 18)) || y == 30
           display_menu(Item.entrees_all_orig)
           y = gets.strip.to_f
         end 
@@ -74,7 +74,7 @@ class Cli
     elsif x == "2" 
       display_menu(Item.salads_all_orig)
         z = gets.strip.to_f  
-          until (z.is_a? Integer && (z > 0 && z < 5)) || z == 30
+          until (z.to_f == z.to_i && (z > 0 && z < 5)) || z == 30
             display_menu(Item.salads_all_orig)
             z = gets.strip.to_f
           end
@@ -91,7 +91,7 @@ class Cli
     elsif x == "3" 
       display_menu(Item.sides_all_orig)
         w = gets.strip.to_f  
-          until (w.is_a? Integer && (w > 0 && w < 9)) || w == 30
+          until (w.to_f == w.to_i && (w > 0 && w < 9)) || w == 30
             display_menu(Item.sides_all_orig)
             w = gets.strip.to_f
           end
