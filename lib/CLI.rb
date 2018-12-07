@@ -57,9 +57,12 @@ class Cli
     if x == "1" 
       display_menu(Item.entrees_all_orig)
       y = gets.strip.to_f  
-        until (y is_a? Integer && (y > 0 && y < 18)) || y == 30
+        until (y.is_a? Integer && (y > 0 && y < 18)) || y == 30
           display_menu(Item.entrees_all_orig)
           y = gets.strip.to_f
+        end 
+        if y == 30 
+          start 
         end 
         a = 1 
           17.times {
@@ -71,10 +74,13 @@ class Cli
     elsif x == "2" 
       display_menu(Item.salads_all_orig)
         z = gets.strip.to_f  
-          until (z is_a? Integer && (z > 0 && z < 5)) || z == 30
+          until (z.is_a? Integer && (z > 0 && z < 5)) || z == 30
             display_menu(Item.salads_all_orig)
             z = gets.strip.to_f
-          end  
+          end
+          if z == 30 
+            start 
+          end
         b = 1 
           4.times {
             if z == b 
@@ -85,10 +91,13 @@ class Cli
     elsif x == "3" 
       display_menu(Item.sides_all_orig)
         w = gets.strip.to_f  
-          until (w is_a? Integer && (w > 0 && w < 9)) || w == 30
+          until (w.is_a? Integer && (w > 0 && w < 9)) || w == 30
             display_menu(Item.sides_all_orig)
             w = gets.strip.to_f
-          end  
+          end
+          if w == 30 
+            start 
+          end
         c = 1 
           8.times {
             if w == c 
@@ -99,10 +108,13 @@ class Cli
     elsif x == "4" 
       display_menu(Item.treats_all_orig)
         v = gets.strip.to_f  
-          until (v is_a? Integer && (v > 0 && v < 19)) || v == 30
+          until (v.is_a? Integer && (v > 0 && v < 19)) || v == 30
             display_menu(Item.treats_all_orig)
             v = gets.strip.to_f
-          end  
+          end
+          if v == 30 
+            start 
+          end
         d = 1 
           18.times {
             if v == d 
@@ -113,10 +125,13 @@ class Cli
     elsif x == "5" 
       display_menu(Item.drinks_all_orig)
         u = gets.strip.to_f  
-          until (u is_a? Integer && (u > 0 && u < 8)) || u == 30
+          until (u.is_a? Integer && (u > 0 && u < 8)) || u == 30
             display_menu(Item.drinks_all_orig)
             u = gets.strip.to_f
           end  
+          if u == 30 
+            start 
+          end
         e = 1 
           7.times {
             if u == e 
@@ -127,10 +142,13 @@ class Cli
     elsif x == "6" 
       display_menu(Item.breakfast_all_orig)
         t = gets.strip.to_f  
-          until (t is_a? Integer && (t > 0 && t < 16)) || t == 30
+          until (t.is_a? Integer && (t > 0 && t < 16)) || t == 30
             display_menu(Item.breakfast_all_orig)
             t = gets.strip.to_f
           end  
+          if y == 30 
+            start 
+          end
         f = 1 
           15.times {
             if t == f 
