@@ -1,12 +1,12 @@
-require "cfaprotein/version"
+require_relative "./cfaprotein/version"
 
 require 'pry'
 require 'nokogiri'
 require 'open-uri'
 
-require_relative '../lib/item.rb'
-require_relative '../lib/scraper.rb'
-require_relative '../lib/clifunctions.rb'
+require_relative './item.rb'
+require_relative './scraper.rb'
+require_relative './clifunctions.rb'
 
 module Cfaprotein
   class Error < StandardError; end
