@@ -113,6 +113,7 @@ class Cli
             end 
             f += 1
           }
+          
     elsif x == 30 
       start 
     else 
