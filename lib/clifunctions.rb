@@ -2,7 +2,7 @@ require_relative './cfaprotein.rb'
 
 
 
-Module Clifunctions 
+module Clifunctions 
   def display_menu(item_all_class_variable)
     a = 1 
     puts "Please select one of the following options:"
