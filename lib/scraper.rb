@@ -4,7 +4,6 @@ require_relative './cfaprotein.rb'
 
 class Scraper 
   
-  include Clifunctions
   attr_accessor :row_width
   
   def front_page 
@@ -51,6 +50,10 @@ class Scraper
     @row_width = 11 
    
   end
+  
+  #
+  #
+  #
   
   def create_menu(b, c, item_all_class_variable, item_all_original_class_variable)
     
@@ -225,6 +228,7 @@ class Scraper
     puts "To return to the beginning of the app, enter anything."
     gets
     start
-  end 
+  end
+  
 end  
  
