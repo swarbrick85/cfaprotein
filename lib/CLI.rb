@@ -9,6 +9,7 @@ class Cli
       puts "#{a}. #{item.name}"
       a += 1 
     end 
+    puts "30. Start the app over"
   end 
   
   def sort_asc(item_all_class_variable, attribute)
