@@ -70,7 +70,11 @@ class Cli
           }
     elsif x == "2" 
       display_menu(Item.salads_all_orig)
-        z = gets.strip.to_i 
+        z = gets.strip.to_f  
+          until (z is_a? Integer && (z > 0 && y < 5)) || z == 30
+            display_menu(Item.entrees_all_orig)
+            z = gets.strip.to_f
+          end  
         b = 1 
           4.times {
             if z == b 
