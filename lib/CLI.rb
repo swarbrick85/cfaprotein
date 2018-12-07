@@ -108,7 +108,7 @@ class Cli
     elsif x == "4" 
       display_menu(Item.treats_all_orig)
         v = gets.strip.to_f  
-          until (v.is_a? Integer && (v > 0 && v < 19)) || v == 30
+          until (v.to_f == v.to_i && (v > 0 && v < 19)) || v == 30
             display_menu(Item.treats_all_orig)
             v = gets.strip.to_f
           end
@@ -125,7 +125,7 @@ class Cli
     elsif x == "5" 
       display_menu(Item.drinks_all_orig)
         u = gets.strip.to_f  
-          until (u.is_a? Integer && (u > 0 && u < 8)) || u == 30
+          until (u.to_f == u.to_i && (u > 0 && u < 8)) || u == 30
             display_menu(Item.drinks_all_orig)
             u = gets.strip.to_f
           end  
@@ -142,7 +142,7 @@ class Cli
     elsif x == "6" 
       display_menu(Item.breakfast_all_orig)
         t = gets.strip.to_f  
-          until (t.is_a? Integer && (t > 0 && t < 16)) || t == 30
+          until (t.to_f == t.to_i && (t > 0 && t < 16)) || t == 30
             display_menu(Item.breakfast_all_orig)
             t = gets.strip.to_f
           end  
