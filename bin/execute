@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative './config/environment.rb'
+require_relative '../config/environment.rb'
 
 x = Scraper.new 
 Item.clear_all
