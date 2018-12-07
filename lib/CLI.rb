@@ -57,7 +57,7 @@ class Cli
     if x == "1" 
       display_menu(Item.entrees_all_orig)
       y = gets.strip.to_f  
-        until y is_a? Integer
+        until (y is_a? Integer && (y > 0 && y < 18)) || y == 30
           display_menu(Item.entrees_all_orig)
           y = gets.strip.to_f
         end 
