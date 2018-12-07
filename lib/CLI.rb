@@ -112,7 +112,11 @@ class Cli
           }
     elsif x == "5" 
       display_menu(Item.drinks_all_orig)
-        u = gets.strip.to_i 
+        u = gets.strip.to_f  
+          until (u is_a? Integer && (u > 0 && u < 8)) || u == 30
+            display_menu(Item.drinks_all_orig)
+            u = gets.strip.to_f
+          end  
         e = 1 
           7.times {
             if u == e 
