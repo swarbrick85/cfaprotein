@@ -146,7 +146,7 @@ class Cli
             display_menu(Item.breakfast_all_orig)
             t = gets.strip.to_f
           end  
-          if y == 30 
+          if t == 30 
             start 
           end
         f = 1 
