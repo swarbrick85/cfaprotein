@@ -98,7 +98,11 @@ class Cli
           }
     elsif x == "4" 
       display_menu(Item.treats_all_orig)
-        v = gets.strip.to_i 
+        v = gets.strip.to_f  
+          until (v is_a? Integer && (v > 0 && v < 19)) || v == 30
+            display_menu(Item.treats_all_orig)
+            v = gets.strip.to_f
+          end  
         d = 1 
           18.times {
             if v == d 
