@@ -126,7 +126,11 @@ class Cli
           }
     elsif x == "6" 
       display_menu(Item.breakfast_all_orig)
-        t = gets.strip.to_i 
+        t = gets.strip.to_f  
+          until (t is_a? Integer && (t > 0 && t < 16)) || t == 30
+            display_menu(Item.breakfast_all_orig)
+            t = gets.strip.to_f
+          end  
         f = 1 
           15.times {
             if t == f 
