@@ -79,7 +79,7 @@ class Cli
         c = 1 
           8.times {
             if w == c 
-              display_item(Item.salads_all_orig[c-1])
+              display_item(Item.sides_all_orig[c-1])
             end 
             c += 1
           }
@@ -89,7 +89,7 @@ class Cli
         d = 1 
           18.times {
             if v == d 
-              display_item(Item.salads_all_orig[d-1])
+              display_item(Item.treats_all_orig[d-1])
             end 
             d += 1
           }
@@ -99,7 +99,7 @@ class Cli
         e = 1 
           7.times {
             if u == e 
-              display_item(Item.salads_all_orig[e-1])
+              display_item(Item.drinks_all_orig[e-1])
             end 
             e += 1
           }
@@ -109,7 +109,7 @@ class Cli
         f = 1 
           15.times {
             if t == f 
-              display_item(Item.salads_all_orig[f-1])
+              display_item(Item.breakfast_all_orig[f-1])
             end 
             f += 1
           }
