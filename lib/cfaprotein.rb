@@ -1,4 +1,4 @@
-require_relative "./cfaprotein/version"
+require_relative "./cfaprotein/version.rb"
 
 require 'pry'
 require 'nokogiri'
