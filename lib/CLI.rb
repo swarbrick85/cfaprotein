@@ -1,4 +1,4 @@
-class CLI 
+class Cli 
   
   def display_menu(item_all_class_variable)
     a = 1 

@@ -5,4 +5,5 @@ require_relative '../lib/cfaprotein.rb'
 x = Scraper.new 
 Item.clear_all
 x.create_entire_menu
-x.start
+y = Cli.new
+y.start
