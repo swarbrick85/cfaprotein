@@ -57,7 +57,8 @@ class Cli
     if x == "1" 
       display_menu(Item.entrees_all_orig)
       y = gets.strip.to_f  
-        until (y.to_f == y.to_i Integer && (y > 0 && y < 18)) || y == 30
+        until (y.to_f == y.to_i && (y > 0 && y < 18)) || y == 30
+          puts "I'm sorry, that's not an option here."
           display_menu(Item.entrees_all_orig)
           y = gets.strip.to_f
         end 
@@ -75,6 +76,7 @@ class Cli
       display_menu(Item.salads_all_orig)
         z = gets.strip.to_f  
           until (z.to_f == z.to_i && (z > 0 && z < 5)) || z == 30
+            puts "I'm sorry, that's not an option here."
             display_menu(Item.salads_all_orig)
             z = gets.strip.to_f
           end
@@ -92,6 +94,7 @@ class Cli
       display_menu(Item.sides_all_orig)
         w = gets.strip.to_f  
           until (w.to_f == w.to_i && (w > 0 && w < 9)) || w == 30
+            puts "I'm sorry, that's not an option here."
             display_menu(Item.sides_all_orig)
             w = gets.strip.to_f
           end
@@ -109,6 +112,7 @@ class Cli
       display_menu(Item.treats_all_orig)
         v = gets.strip.to_f  
           until (v.to_f == v.to_i && (v > 0 && v < 19)) || v == 30
+            puts "I'm sorry, that's not an option here."
             display_menu(Item.treats_all_orig)
             v = gets.strip.to_f
           end
@@ -126,6 +130,7 @@ class Cli
       display_menu(Item.drinks_all_orig)
         u = gets.strip.to_f  
           until (u.to_f == u.to_i && (u > 0 && u < 8)) || u == 30
+            puts "I'm sorry, that's not an option here."
             display_menu(Item.drinks_all_orig)
             u = gets.strip.to_f
           end  
@@ -143,6 +148,7 @@ class Cli
       display_menu(Item.breakfast_all_orig)
         t = gets.strip.to_f  
           until (t.to_f == t.to_i && (t > 0 && t < 16)) || t == 30
+            puts "I'm sorry, that's not an option here."
             display_menu(Item.breakfast_all_orig)
             t = gets.strip.to_f
           end  
