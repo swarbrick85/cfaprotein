@@ -49,32 +49,32 @@ class Item
     @@all 
   end   
   
-  def self.breakfast_all
-    @@breakfast_all
+  def self.breakfast_all_orig
+    @@breakfast_all_orig
   end
   
-  def self.entrees_all
-    @@entrees_all
+  def self.entrees_all_orig
+    @@entrees_all_orig
   end
   
-  def self.salads_all
-    @@salads_all
+  def self.salads_all_orig
+    @@salads_all_orig
   end
   
-  def self.sides_all
-    @@sides_all
+  def self.sides_all_orig
+    @@sides_all_orig
   end
   
-  def self.treats_all
-    @@treats_all
+  def self.treats_all_orig
+    @@treats_all_orig
   end
   
-  def self.drinks_all
-    @@drinks_all
+  def self.drinks_all_orig
+    @@drinks_all_orig
   end
   
-  def self.all 
-    @@all 
+  def self.all_orig 
+    @@all_orig 
   end   
   
   def self.clear_all 
