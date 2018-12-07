@@ -56,7 +56,11 @@ class Cli
     
     if x == "1" 
       display_menu(Item.entrees_all_orig)
-        y = gets.strip.to_i  
+      y = gets.strip.to_f  
+        until y is_a? Integer
+          display_menu(Item.entrees_all_orig)
+          y = gets.strip.to_f
+        end 
         a = 1 
           17.times {
             if y == a 
