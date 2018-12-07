@@ -5,7 +5,6 @@ require_relative './cfaprotein.rb'
 class Scraper 
   
   include Clifunctions
-  include Dry  
   attr_accessor :row_width
   
   def front_page 
