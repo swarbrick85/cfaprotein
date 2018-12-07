@@ -1,8 +1,6 @@
-require_relative './environment.rb'
+require_relative './cfaprotein.rb'
 
-require 'nokogiri'
-require 'open-uri'
-require 'pry'
+
 
 Module clifunctions 
   def display_menu(item_all_class_variable)

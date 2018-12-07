@@ -1,8 +1,5 @@
-require_relative './environment.rb'
+require_relative './cfaprotein.rb'
 
-require 'nokogiri'
-require 'open-uri'
-require 'pry'
 
 class Item 
   
