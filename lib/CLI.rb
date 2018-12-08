@@ -24,11 +24,13 @@ class Cli
   end 
   
   def sort_asc(item_all_class_variable, attribute)
-    item_all_class_variable.sort_by {|item| item.attribute}
+    x = item_all_class_variable.sort_by {|item| item.attribute}
+    x
   end
   
   def sort_desc(item_all_class_variable, attribute)
-    (item_all_class_variable.sort_by {|item| item.attribute}).reverse 
+    x = (item_all_class_variable.sort_by {|item| item.attribute}).reverse 
+    x
   end
 
   def start 
