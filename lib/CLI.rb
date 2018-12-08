@@ -12,6 +12,17 @@ class Cli
     puts "30. Start the app over"
   end 
   
+  def list_menus 
+    puts "Please select from the following menu options:"
+    puts "1.  Entrees Menu"
+    puts "2.  Salads Menu"
+    puts "3.  Sides Menu"
+    puts "4.  Treats Menu"
+    puts "5.  Drinks Menu"
+    puts "6.  Breakfast Menu"
+    puts "30. Start the app over" 
+  end 
+  
   def sort_asc(item_all_class_variable, attribute)
     item_all_class_variable.sort_by {|item| item.attribute}
   end
@@ -32,7 +43,7 @@ class Cli
     puts "At any time you can press ctrl + C to exit the app."
     puts "Please make a selection from the following:"
     puts "  1. I'd like to look at individual menu items."
-    puts "  2. I'd like to list menu items according to an attribute, in ascending or descending order (for example, to list from the menu item with the most protein to the item with the least protein)."
+    puts "  2. I'd like to list menu items according to an attribute, in ascending or descending order (for example, you can list menu items with the most protein to the item with the least protein)."
     puts "  3. I'd like to find menu items within a range that I select for a given attribute."
     x = gets.strip
     if x == "1" 
@@ -48,14 +59,7 @@ class Cli
   end 
 
   def individual_item_path 
-    puts "Please select from the following menu options:"
-    puts "1.  Entrees Menu"
-    puts "2.  Salads Menu"
-    puts "3.  Sides Menu"
-    puts "4.  Treats Menu"
-    puts "5.  Drinks Menu"
-    puts "6.  Breakfast Menu"
-    puts "30. Start the app over"
+    list_menus
     x = gets.strip 
     
     if x == "1" 
