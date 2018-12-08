@@ -185,6 +185,7 @@ class Cli
     puts "#{item.pct_cal_by_cc}% of calories from complex carbs"
     puts "#{item.pct_cal_by_sc}% of calories from sugar"
     puts "#{item.pct_cal_by_tc}% of calories from total carbs"
+    puts "#{item.cal_per_protein} calories per gram of protein."
     puts " "
     puts "To return to the beginning of the app, enter anything."
     gets
