@@ -31,7 +31,12 @@ class Cli
     x = (item_all_class_variable.sort_by {|item| item.attribute}).reverse 
     x
   end
-
+  
+  def list_attributes
+    puts "1. protein"
+    puts "2. "
+  end
+  
   def start 
     puts "Hi, welcome to CFA Protein!"
     puts "This app exclusively addresses items on the menu that have at least 1 gram of protein."
