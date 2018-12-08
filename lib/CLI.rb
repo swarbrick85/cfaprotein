@@ -68,7 +68,7 @@ class Cli
       puts "I'm sorry, that's not an option here."
       asc_desc
     end 
-    puts ""
+    puts "Please select an attribute by which to sort this menu:"
   end 
   
   def individual_item_path 
