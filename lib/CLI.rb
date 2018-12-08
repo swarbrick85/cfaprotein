@@ -32,7 +32,8 @@ class Cli
     puts "At any time you can press ctrl + C to exit the app."
     puts "Please make a selection from the following:"
     puts "  1. I'd like to look at individual menu items."
-    puts "  2. I'd like to compare items."
+    puts "  2. I'd like to list menu items according to an attribute, in ascending or descending order (for example, to list from the menu item with the most protein to the item with the least protein)."
+    puts "  3. I'd like to find menu items within a range that I select for a given attribute."
     x = gets.strip
     if x == "1" 
       individual_item_path
