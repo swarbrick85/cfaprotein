@@ -38,7 +38,9 @@ class Cli
     if x == "1" 
       individual_item_path
     elsif x == "2" 
-      comparing_menu 
+      asc_desc
+    elsif x == "3"
+      find_in_range
     else 
       puts "I'm sorry, that's not an option here."
       start 
