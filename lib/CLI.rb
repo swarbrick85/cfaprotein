@@ -20,7 +20,6 @@ class Cli
     puts "4.  Treats Menu"
     puts "5.  Drinks Menu"
     puts "6.  Breakfast Menu"
-    puts "30. Start the app over" 
   end 
   
   def sort_asc(item_all_class_variable, attribute)
@@ -60,8 +59,13 @@ class Cli
     end 
   end 
 
+  def asc_desc
+    
+  end 
+  
   def individual_item_path 
     list_menus
+    puts "30. Start the app over"
     x = gets.strip 
     
     if x == "1" 
