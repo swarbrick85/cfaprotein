@@ -64,11 +64,11 @@ class Cli
     puts "7.  The entire menu"
     puts "30. Start the app over"
     x = gets.strip.to_f 
-    if x != x.to_i || x < 1
+    if x != x.to_i || x < 1 || x > 30 || (x > 7 && x < 30)
       puts "I'm sorry, that's not an option here."
       asc_desc
     end 
-    
+    puts ""
   end 
   
   def individual_item_path 
