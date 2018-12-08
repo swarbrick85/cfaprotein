@@ -60,6 +60,14 @@ class Cli
   end 
 
   def asc_desc
+    list_menus
+    puts "7.  The entire menu"
+    puts "30. Start the app over"
+    x = gets.strip.to_f 
+    if x != x.to_i || x < 1
+      puts "I'm sorry, that's not an option here."
+      asc_desc
+    end 
     
   end 
   
@@ -67,7 +75,6 @@ class Cli
     list_menus
     puts "30. Start the app over"
     x = gets.strip 
-    
     if x == "1" 
       display_menu(Item.entrees_all_orig)
       y = gets.strip.to_f  
