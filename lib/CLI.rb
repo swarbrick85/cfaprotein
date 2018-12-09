@@ -103,6 +103,11 @@ class Cli
       start 
     end 
     puts "Please select an attribute by which to sort this menu:"
+    list_attributes
+    y = gets.strip.to_f
+    
+    
+    
   end 
   
   def individual_item_path 
