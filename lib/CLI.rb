@@ -476,7 +476,7 @@ class Cli
       a = gets.strip
     end 
     
-    @selected_menu.find_by {|
+    b = @selected_menu.find_all {|item| item.protein >= z && item.protein <= a} 
   end
   
 end 
