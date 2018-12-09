@@ -134,7 +134,7 @@ class Cli
     if y == 1 
       f = (@selected_menu.sort_by {|item| item.protein}).reverse
       f.each do |item|
-        puts "#{item.name} - #{item.protein} g protein"
+        puts "#{item.name} - #{item.protein}g protein"
       end 
     elsif y == 2 
        f = (@selected_menu.sort_by {|item| item.calories}).reverse
@@ -143,10 +143,14 @@ class Cli
        end
     elsif y == 3 
        f = (@selected_menu.sort_by {|item| item.fat}).reverse
-       display_menu(f)
+       f.each do |item|
+        puts "#{item.name} - #{item.fat}g fat"
+       end
     elsif y == 4 
        f = (@selected_menu.sort_by {|item| item.sugar}).reverse
-       display_menu(f)
+       f.each do |item|
+        puts "#{item.name} - #{item.sugar}g sugar"
+       end
     elsif y == 5 
        f = (@selected_menu.sort_by {|item| item.complex_carbs}).reverse
        display_menu(f)
@@ -190,7 +194,7 @@ class Cli
     if y == 1 
       f = @selected_menu.sort_by {|item| item.protein}
       f.each do |item|
-        puts "#{item.name} - #{item.protein} g protein"
+        puts "#{item.name} - #{item.protein}g protein"
       end 
     elsif y == 2 
        f = @selected_menu.sort_by {|item| item.calories}  
@@ -200,22 +204,22 @@ class Cli
     elsif y == 3 
        f = @selected_menu.sort_by {|item| item.fat}
        f.each do |item|
-        puts "#{item.name} - #{item.fat} g fat"
+        puts "#{item.name} - #{item.fat}g fat"
        end
     elsif y == 4 
        f = @selected_menu.sort_by {|item| item.sugar}
        f.each do |item|
-        puts "#{item.name} - #{item.sugar} g sugar"
+        puts "#{item.name} - #{item.sugar}g sugar"
        end
     elsif y == 5 
        f = @selected_menu.sort_by {|item| item.complex_carbs}
        f.each do |item|
-        puts "#{item.name} - #{item.complex_carbs} g complex carbs"
+        puts "#{item.name} - #{item.complex_carbs}g complex carbs"
        end
     elsif y == 6 
        f = @selected_menu.sort_by {|item| item.total_carbs}
        f.each do |item|
-        puts "#{item.name} - #{item.total_carbs} g total carbs"
+        puts "#{item.name} - #{item.total_carbs}g total carbs"
        end
     elsif y == 7 
        f = @selected_menu.sort_by {|item| item.pct_cal_by_protein}
