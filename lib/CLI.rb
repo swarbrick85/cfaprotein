@@ -117,9 +117,61 @@ class Cli
       puts "2.  Sort in ascending order"
       puts "30. Start the app over"
     end 
+    
     if z == "1"
       
+      puts "Please select an attribute by which to sort this menu:"
+       list_attributes
+       puts "30. start the app over"
+       y = gets.strip.to_f
+       until ((y == y.to_i && y > 0 && y < 13) || (y == 30))
+         puts "I'm sorry, that's not an option here."
+         puts "Please select an attribute by which to sort this menu:"
+         list_attributes
+         puts "30. start the app over"
+         y = gets.strip.to_f
+       end 
+    if y == 1 
+      f = (@selected_menu.sort_by {|item| item.protein}).reverse
+      display_menu(f)
+    elsif y == 2 
+       f = (@selected_menu.sort_by {|item| item.calories}).reverse
+       display_menu(f)
+    elsif y == 3 
+       f = (@selected_menu.sort_by {|item| item.fat}).reverse
+       display_menu(f)
+    elsif y == 4 
+       f = (@selected_menu.sort_by {|item| item.sugar}).reverse
+       display_menu(f)
+    elsif y == 5 
+       f = (@selected_menu.sort_by {|item| item.complex_carbs}).reverse
+       display_menu(f)
+    elsif y == 6 
+       f = (@selected_menu.sort_by {|item| item.total_carbs}).reverse
+       display_menu(f)
+    elsif y == 7 
+       f = (@selected_menu.sort_by {|item| item.pct_cal_by_protein}).reverse
+       display_menu(f)
+    elsif y == 8 
+       f = (@selected_menu.sort_by {|item| item.pct_cal_by_fat}).reverse
+       display_menu(f)
+    elsif y == 9  
+       f = (@selected_menu.sort_by {|item| item.pct_cal_by_sc}).reverse
+       display_menu(f)
+    elsif y == 10 
+       f = (@selected_menu.sort_by {|item| item.pct_cal_by_cc}).reverse
+       display_menu(f)
+    elsif y == 11 
+       f = (@selected_menu.sort_by {|item| item.pct_cal_by_tc}).reverse
+       display_menu(f)
+    elsif y == 12 
+       f = (@selected_menu.sort_by {|item| item.cal_per_protein}).reverse
+       display_menu(f)
+    elsif y == 30 
+      start 
+    end 
     elsif z == "2"
+       
        puts "Please select an attribute by which to sort this menu:"
        list_attributes
        puts "30. start the app over"
