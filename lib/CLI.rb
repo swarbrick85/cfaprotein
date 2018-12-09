@@ -148,15 +148,15 @@ class Cli
     if y == 1 
       f = @selected_menu.sort_by {|item| item.protein}
     elsif y == 2 
-      @selected_attr = "calories"
+       f = @selected_menu.sort_by {|item| item.calories}
     elsif y == 3 
-      @selected_attr = "fat"
+       f = @selected_menu.sort_by {|item| item.fat}
     elsif y == 4 
-      @selected_attr = "sugar"
+       f = @selected_menu.sort_by {|item| item.sugar}
     elsif y == 5 
-      @selected_attr = "complex_carbs"
+       f = @selected_menu.sort_by {|item| item.complex_carbs}
     elsif y == 6 
-      @selected_attr = "total_carbs"
+       f = @selected_menu.sort_by {|item| item.total_carbs}
     elsif y == 7 
       @selected_attr = "pct_cal_by_protein"
     elsif y == 8 
