@@ -497,9 +497,19 @@ class Cli
         puts "#{item.name} - #{item.sugar}g sugar"
       end 
      elsif y == 5
-      b = @selected_menu.find_all {|item| item.calories >= z && item.calories <= a} 
+      b = @selected_menu.find_all {|item| item.complex_carbs >= z && item.complex_carbs <= a} 
       b.each do |item|
-        puts "#{item.name} - #{item.calories} calories"
+        puts "#{item.name} - #{item.complex_carbs}g complex carbs"
+      end 
+     elsif y == 6
+      b = @selected_menu.find_all {|item| item.total_carbs >= z && item.total_carbs <= a} 
+      b.each do |item|
+        puts "#{item.name} - #{item.total_carbs}g total carbs"
+      end 
+     elsif y == 7
+      b = @selected_menu.find_all {|item| item.pct_cal_by_protein >= z && item.pct_cal_by_protein <= a} 
+      b.each do |item|
+        puts "#{item.name} - #{item.pct_cal_by_protein}% of calories from protein"
       end 
   end
   
