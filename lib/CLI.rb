@@ -67,7 +67,7 @@ class Cli
     puts "If you make a selection and are returned to a prior menu, it means:"
     puts "  1. There are no items within the parameters you set out."
     puts "  2. You made an invalid entry of some kind."
-    puts "  3. Our app is out of date. Please feel free to email me at fakeemail@gmail.com"
+    puts "  3. Our app is out of date. Please feel free to let us know at https://github.com/'swarbrick85'/cfaprotein"
     puts "At any time you can press ctrl + C to exit the app."
     puts "Please make a selection from the following:"
     puts "  1. I'd like to look at individual menu items."
