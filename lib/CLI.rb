@@ -153,10 +153,14 @@ class Cli
        end
     elsif y == 5 
        f = (@selected_menu.sort_by {|item| item.complex_carbs}).reverse
-       display_menu(f)
+       f.each do |item|
+        puts "#{item.name} - #{item.complex_carbs}g complex carbs"
+       end
     elsif y == 6 
        f = (@selected_menu.sort_by {|item| item.total_carbs}).reverse
-       display_menu(f)
+       f.each do |item|
+        puts "#{item.name} - #{item.total_carbs}g total carbs"
+       end
     elsif y == 7 
        f = (@selected_menu.sort_by {|item| item.pct_cal_by_protein}).reverse
        display_menu(f)
