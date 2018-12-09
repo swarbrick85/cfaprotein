@@ -448,7 +448,9 @@ class Cli
     puts "30. Start the app over"
     y = gets.strip.to_f
     puts "Please enter the number for the low end of the range you are looking for items within:"
-    z = gets.strip
+    z = gets.strip.to_f
+    puts "Please enter the number for the high end of the range you are looking for items within:"
+    a = gets.strip.to_f
   end
   
 end 
