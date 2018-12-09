@@ -120,21 +120,7 @@ class Cli
     if z == "1"
       
     elsif z == "2"
-      
-    elsif z == "30"
-      start 
-    end 
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-    puts "Please select an attribute by which to sort this menu:"
+       puts "Please select an attribute by which to sort this menu:"
     list_attributes
     puts "30. start the app over"
     y = gets.strip.to_f
@@ -172,7 +158,11 @@ class Cli
     elsif y == 30 
       start 
     end 
-    
+    elsif z == "30"
+      start 
+    end 
+   
+   
   end 
   
   def individual_item_path 
