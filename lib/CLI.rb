@@ -426,19 +426,19 @@ class Cli
       find_in_range
     end 
     if x == 1 
-      @selected_menu = Item.entrees_all 
+      @selected_menu = Item.entrees_all_orig 
     elsif x == 2 
-      @selected_menu = Item.salads_all 
+      @selected_menu = Item.salads_all_orig 
     elsif x == 3 
-      @selected_menu = Item.sides_all 
+      @selected_menu = Item.sides_all_orig 
     elsif x == 4 
-      @selected_menu = Item.treats_all 
+      @selected_menu = Item.treats_all_orig 
     elsif x == 5 
-      @selected_menu = Item.drinks_all 
+      @selected_menu = Item.drinks_all_orig 
     elsif x == 6 
-      @selected_menu = Item.breakfast_all 
+      @selected_menu = Item.breakfast_all_orig 
     elsif x == 7 
-      @selected_menu = Item.all 
+      @selected_menu = Item.all_orig  
     elsif x == 30 
       start 
     end 
@@ -476,10 +476,11 @@ class Cli
       a = gets.strip
     end 
     
-    b = @selected_menu.find_all {|item| item.protein >= z && item.protein <= a} 
-    b.each do |item|
-      puts "#{item.name} - #{item.protein}g protein"
-    end 
+    if y == 1
+      b = @selected_menu.find_all {|item| item.protein >= z && item.protein <= a} 
+      b.each do |item|
+        puts "#{item.name} - #{item.protein}g protein"
+      end 
   end
   
 end 
