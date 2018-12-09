@@ -286,6 +286,7 @@ class Cli
       start 
     end 
    
+   puts " "
    puts "Enter anything to start the app over"
    q = gets.strip
    start 
