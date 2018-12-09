@@ -158,17 +158,17 @@ class Cli
     elsif y == 6 
        f = @selected_menu.sort_by {|item| item.total_carbs}
     elsif y == 7 
-      @selected_attr = "pct_cal_by_protein"
+       f = @selected_menu.sort_by {|item| item.pct_cal_by_protein}
     elsif y == 8 
-      @selected_attr = "pct_cal_by_fat"
+       f = @selected_menu.sort_by {|item| item.pct_cal_by_fat}
     elsif y == 9  
-      @selected_attr = "pct_cal_by_sc"
+       f = @selected_menu.sort_by {|item| item.pct_cal_by_sc}
     elsif y == 10 
-      @selected_attr = "pct_cal_by_cc"
+       f = @selected_menu.sort_by {|item| item.pct_cal_by_cc}
     elsif y == 11 
-      @selected_attr = "pct_cal_by_tc" 
+       f = @selected_menu.sort_by {|item| item.pct_cal_by_tc}
     elsif y == 12 
-      @selected_attr = :cal_per_protein
+       f = @selected_menu.sort_by {|item| item.cal_per_protein}
     elsif y == 30 
       start 
     end 
