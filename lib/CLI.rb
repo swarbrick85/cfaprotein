@@ -163,16 +163,24 @@ class Cli
        end
     elsif y == 7 
        f = (@selected_menu.sort_by {|item| item.pct_cal_by_protein}).reverse
-       display_menu(f)
+       f.each do |item|
+        puts "#{item.name} - #{item.pct_cal_by_protein}% of calories from protein"
+       end
     elsif y == 8 
        f = (@selected_menu.sort_by {|item| item.pct_cal_by_fat}).reverse
-       display_menu(f)
+       f.each do |item|
+        puts "#{item.name} - #{item.pct_cal_by_fat}% of calories from fat"
+       end
     elsif y == 9  
        f = (@selected_menu.sort_by {|item| item.pct_cal_by_sc}).reverse
-       display_menu(f)
+       f.each do |item|
+        puts "#{item.name} - #{item.pct_cal_by_sc}% of calories from sugar"
+       end
     elsif y == 10 
        f = (@selected_menu.sort_by {|item| item.pct_cal_by_cc}).reverse
-       display_menu(f)
+       f.each do |item|
+        puts "#{item.name} - #{item.pct_cal_by_cc}% of calories from complex carbs"
+       end
     elsif y == 11 
        f = (@selected_menu.sort_by {|item| item.pct_cal_by_tc}).reverse
        display_menu(f)
