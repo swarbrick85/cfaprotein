@@ -477,6 +477,9 @@ class Cli
     end 
     
     b = @selected_menu.find_all {|item| item.protein >= z && item.protein <= a} 
+    b.each do |item|
+      puts "#{item.name} - #{item.protein}g protein"
+    end 
   end
   
 end 
