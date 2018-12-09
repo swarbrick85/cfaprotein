@@ -417,8 +417,9 @@ class Cli
   def find_in_range
     puts "Please select a menu:"
     list_menus
-    puts "30. start the app over"
-    x = gets.strip
+    puts "7.  Entire menu"
+    puts "30. Start the app over"
+    x = gets.strip.to_f
   end
   
 end 
