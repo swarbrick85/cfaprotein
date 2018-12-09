@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Instructions are given at the opening of the app. Just follow the instructions. If you make an invalid input, it won't break the app. Just keep going. 
 
 ## Development
 
