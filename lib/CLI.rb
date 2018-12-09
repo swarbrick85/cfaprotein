@@ -2,7 +2,7 @@ require_relative './cfaprotein.rb'
 
 class Cli 
   
-  attr_accessor :selected_menu, :selected_attr
+  attr_accessor :selected_menu, :selected_attr, :selected_asc_desc
   
   def display_menu(item_all_class_variable)
     a = 1 
@@ -104,14 +104,23 @@ class Cli
     end 
     puts "Please select an attribute by which to sort this menu:"
     list_attributes
-    puts
+    puts "30. start the app over"
     y = gets.strip.to_f
     until ((y == y.to_i && y > 0 && y < 13) || (y == 30))
       puts "I'm sorry, that's not an option here."
       puts "Please select an attribute by which to sort this menu:"
       list_attributes
+       puts "30. start the app over"
       y = gets.strip.to_f
     end 
+    if y == 1 
+      @selected_attr = "protein"
+    elsif y == 2 
+      @selected_attr = "calories"
+    elsif y == 3 
+      @selected_attr = "fat"
+    elsif y ==
+    
   end 
   
   def individual_item_path 
