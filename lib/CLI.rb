@@ -447,15 +447,31 @@ class Cli
     list_attributes
     puts "30. Start the app over"
     y = gets.strip.to_f
+    
     until (y == y.to_i && y > 0 & y < 13) || y == 30 
       puts "Sorry, that is not an option here."
       list_attributes
       puts "30. Start the app over"
+      y = gets.strip.to_f
     end 
+    
     puts "Please enter the number for the low end of the range you are looking for items within:"
     z = gets.strip
+    
+    until z == z.to_f
+      puts "Sorry, that is not an option here."
+      puts "Please enter the number for the low end of the range you are looking for items within:"
+      z = gets.strip
+    end 
+    
     puts "Please enter the number for the high end of the range you are looking for items within:"
     a = gets.strip
+    
+    until a == a.to_f
+      puts "Sorry, that is not an option here."
+      puts "Please enter the number for the high end of the range you are looking for items within:"
+      a = gets.strip
+    end 
   end
   
 end 
