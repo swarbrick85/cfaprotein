@@ -1,6 +1,6 @@
 # Cfaprotein
 
-This gem will take information from a public website regarding protein content of Chick Fil A items, as well as information regarding calories and other nutritional information that is pertinent to people that work out.
+This gem will take information from a public website regarding protein content of Chick Fil A items, as well as information regarding calories and other nutritional information that is pertinent to people that work out. With that information, it will perform 3 basic functions. 1. list selected nutritional information about individual menu items that have at least 1g protein in them. 2. sort menu items in ascending or descending order according to any available attribute chosen by the user. 3. find items within a range given by the user for an attribute chosen by the user. 
 
 ## Installation
 
