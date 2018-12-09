@@ -126,6 +126,7 @@ class Cli
       puts "1.  Sort in descending order"
       puts "2.  Sort in ascending order"
       puts "30. Start the app over"
+      z = gets.strip 
     end 
     
     if z == "1"
