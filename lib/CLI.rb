@@ -117,6 +117,11 @@ class Cli
     end 
     if z == "1"
       @selected_asc_desc = "desc"
+      puts "please select 1"
+      y = gets.strip 
+      if y == 1 
+      f = sort_desc(@selected_menu, protein)
+      f
     elsif z == "2"
       @selected_asc_desc = "asc"
     elsif z == "30"
@@ -124,7 +129,7 @@ class Cli
     end 
     
     
-    puts "Please select an attribute by which to sort this menu:"
+    puts "Please select an attribute by which to sort this men:"
     list_attributes
     puts "30. start the app over"
     y = gets.strip.to_f
@@ -136,7 +141,7 @@ class Cli
       y = gets.strip.to_f
     end 
     if y == 1 
-      @selected_attr = "protein"
+      sort_desc(@selected_menu, protein)
     elsif y == 2 
       @selected_attr = "calories"
     elsif y == 3 
