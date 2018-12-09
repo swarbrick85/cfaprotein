@@ -129,6 +129,31 @@ class Cli
       @selected_attr = "pct_cal_by_protein"
     elsif y == 8 
       @selected_attr = "pct_cal_by_fat"
+    elsif y == 9  
+      @selected_attr = "pct_cal_by_sc"
+    elsif y == 10 
+      @selected_attr = "pct_cal_by_cc"
+    elsif y == 11 
+      @selected_attr = "pct_cal_by_tc" 
+    elsif y == 12 
+      @selected_attr = "cal_per_protein"
+    elsif y == 30 
+      start 
+    end 
+    puts "Please select from the following:"
+    puts "1.  Sort in descending order"
+    puts "2.  Sort in ascending order"
+    puts "30. Start the app over"
+    z = gets.strip 
+    until (z == "1" || z == "2")
+      puts "I'm sorry, that's not an option here."
+      puts "Please select from the following:"
+      puts "1.  Sort in descending order"
+      puts "2.  Sort in ascending order"
+      puts "30. Start the app over"
+    end 
+    if z == "1"
+      
   end 
   
   def individual_item_path 
