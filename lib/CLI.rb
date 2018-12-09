@@ -194,6 +194,7 @@ class Cli
     elsif y == 30 
       start 
     end 
+    
     elsif z == "2"
        
        puts "Please select an attribute by which to sort this menu:"
@@ -275,6 +276,9 @@ class Cli
       start 
     end 
    
+   puts "Enter anything to start the app over"
+   q = gets.strip
+   start 
    
   end 
   
