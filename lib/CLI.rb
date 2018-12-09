@@ -420,6 +420,7 @@ class Cli
     puts "7.  Entire menu"
     puts "30. Start the app over"
     x = gets.strip.to_f
+    
   end
   
 end 
