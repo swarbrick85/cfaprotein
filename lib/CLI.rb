@@ -97,7 +97,11 @@ class Cli
       @selected_menu = Item.drinks_all 
     elsif x == 6 
       @selected_menu = Item.breakfast_all 
-    elsif x == 7
+    elsif x == 7 
+      @selected_menu = Item.all 
+    elsif x == 30 
+      start 
+    end 
     puts "Please select an attribute by which to sort this menu:"
   end 
   
