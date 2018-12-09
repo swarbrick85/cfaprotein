@@ -2,7 +2,7 @@ require_relative './cfaprotein.rb'
 
 class Cli 
   
-  attr_accessor :selected_menu, :selected_attr
+  attr_accessor :selected_menu
   
   def display_menu(item_all_class_variable)
     a = 1 
@@ -146,7 +146,7 @@ class Cli
       y = gets.strip.to_f
     end 
     if y == 1 
-      @selected_attr = "protein"
+      f = 
     elsif y == 2 
       @selected_attr = "calories"
     elsif y == 3 
