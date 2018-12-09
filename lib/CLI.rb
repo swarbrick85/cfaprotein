@@ -146,7 +146,7 @@ class Cli
       y = gets.strip.to_f
     end 
     if y == 1 
-      f = 
+      f = @selected_menu.sort_by {|item| item.protein}
     elsif y == 2 
       @selected_attr = "calories"
     elsif y == 3 
