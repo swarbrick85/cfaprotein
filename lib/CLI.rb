@@ -536,7 +536,7 @@ class Cli
       b.each do |item|
         puts "#{item.name} - #{item.cal_per_protein} calories per gram of protein"
       end 
-      
+     end 
       puts "Please enter anything to start the app over."
       c = gets.strip 
       start 
