@@ -421,7 +421,34 @@ class Cli
     puts "7.  Entire menu"
     puts "30. Start the app over"
     x = gets.strip.to_f
+    if x != x.to_i || x < 1 || x > 30 || (x > 7 && x < 30)
+      puts "I'm sorry, that's not an option here."
+      find_in_range
+    end 
+    if x == 1 
+      @selected_menu = Item.entrees_all 
+    elsif x == 2 
+      @selected_menu = Item.salads_all 
+    elsif x == 3 
+      @selected_menu = Item.sides_all 
+    elsif x == 4 
+      @selected_menu = Item.treats_all 
+    elsif x == 5 
+      @selected_menu = Item.drinks_all 
+    elsif x == 6 
+      @selected_menu = Item.breakfast_all 
+    elsif x == 7 
+      @selected_menu = Item.all 
+    elsif x == 30 
+      start 
+    end 
     
+    puts "Please select the nutritional attribute you'd like to find items for:"
+    list_attributes
+    puts "30. Start the app over"
+    y = gets.strip.to_f
+    puts "Please enter the number for the low end of the range you are looking for items within:"
+    z = gets.strip
   end
   
 end 
