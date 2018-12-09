@@ -451,7 +451,7 @@ class Cli
       start
     end 
     
-    until (y == y.to_i && y > 0 & y < 13) || y == 30 
+    until ((y == y.to_i && y > 0 & y < 13) || y == 30) 
       puts "Sorry, that is not an option here."
       list_attributes
       puts "30. Start the app over"
