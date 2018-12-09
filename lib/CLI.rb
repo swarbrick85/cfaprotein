@@ -60,6 +60,7 @@ class Cli
   end
   
   def start 
+    binding.pry 
     puts "Hi, welcome to CFA Protein!"
     puts "This app exclusively addresses items on the menu that have at least 1 gram of protein."
     puts "It allows you to look at nutritional information about individual menu items. It also allows you to list menu items according to a particular nutritional attribute, in either ascending or descending order. Additionally you can search for menu items within a given range for a particular nutritional attribute."

@@ -68,6 +68,7 @@ class Scraper
          item_all_class_variable << x 
          item_all_original_class_variable << x
          Item.all << x 
+         Item.all_orig << x 
          z = front_page.css("td")[c + (@row_width * a)].text 
          z[0...11] = ""
          x.name = z 
