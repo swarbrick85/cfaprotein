@@ -104,11 +104,14 @@ class Cli
     end 
     puts "Please select an attribute by which to sort this menu:"
     list_attributes
+    puts
     y = gets.strip.to_f
-    if y != y.to_i || y < 1 || y > 30 || (y > 12 && y < 30)
+    until ((y == y.to_i && y > 0 && y < 13) || (y == 30))
       puts "I'm sorry, that's not an option here."
-    
-    
+      puts "Please select an attribute by which to sort this menu:"
+      list_attributes
+      y = gets.strip.to_f
+    end 
   end 
   
   def individual_item_path 
