@@ -2,6 +2,8 @@ require_relative './cfaprotein.rb'
 
 class Cli 
   
+  attr_accessor :selected_menu, :selected_attr
+  
   def display_menu(item_all_class_variable)
     a = 1 
     puts "Please select one of the following options:"
@@ -83,6 +85,19 @@ class Cli
       puts "I'm sorry, that's not an option here."
       asc_desc
     end 
+    if x == 1 
+      @selected_menu = Item.entrees_all 
+    elsif x == 2 
+      @selected_menu = Item.salads_all 
+    elsif x == 3 
+      @selected_menu = Item.sides_all 
+    elsif x == 4 
+      @selected_menu = Item.treats_all 
+    elsif x == 5 
+      @selected_menu = Item.drinks_all 
+    elsif x == 6 
+      @selected_menu = Item.breakfast_all 
+    elsif x == 7
     puts "Please select an attribute by which to sort this menu:"
   end 
   
