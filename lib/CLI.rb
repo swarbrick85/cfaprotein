@@ -106,8 +106,8 @@ class Cli
    
    
     puts "Please select from the following:"
-    puts "1.  Sort in descending order"
-    puts "2.  Sort in ascending order"
+    puts "1.  Sort this menu in descending order"
+    puts "2.  Sort this menu in ascending order"
     puts "30. Start the app over"
     z = gets.strip 
     until (z == "1" || z == "2" || z == "30")
@@ -118,10 +118,9 @@ class Cli
       puts "30. Start the app over"
     end 
     if z == "1"
-      f = sort_desc(@selected_menu, @selected_attr)
-      f
+      
     elsif z == "2"
-      sort_asc(@selected_menu, @selected_attr)
+      
     elsif z == "30"
       start 
     end 
