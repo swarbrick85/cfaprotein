@@ -199,16 +199,24 @@ class Cli
        end
     elsif y == 3 
        f = @selected_menu.sort_by {|item| item.fat}
-       display_menu(f)
+       f.each do |item|
+        puts "#{item.name} - #{item.fat} g fat"
+       end
     elsif y == 4 
        f = @selected_menu.sort_by {|item| item.sugar}
-       display_menu(f)
+       f.each do |item|
+        puts "#{item.name} - #{item.sugar} g sugar"
+       end
     elsif y == 5 
        f = @selected_menu.sort_by {|item| item.complex_carbs}
-       display_menu(f)
+       f.each do |item|
+        puts "#{item.name} - #{item.complex_carbs} g complex carbs"
+       end
     elsif y == 6 
        f = @selected_menu.sort_by {|item| item.total_carbs}
-       display_menu(f)
+       f.each do |item|
+        puts "#{item.name} - #{item.total_carbs} g total carbs"
+       end
     elsif y == 7 
        f = @selected_menu.sort_by {|item| item.pct_cal_by_protein}
        display_menu(f)
