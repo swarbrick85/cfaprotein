@@ -526,10 +526,15 @@ class Cli
       b.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_cc}% of calories from complex carbs"
       end 
-     elsif y == 2
-      b = @selected_menu.find_all {|item| item.calories >= z && item.calories <= a} 
+     elsif y == 11
+      b = @selected_menu.find_all {|item| item.pct_cal_by_tc >= z && item.pct_cal_by_tc <= a} 
       b.each do |item|
-        puts "#{item.name} - #{item.calories} calories"
+        puts "#{item.name} - #{item.pct_cal_by_tc}% of calories from total carbs"
+      end 
+     elsif y == 12
+      b = @selected_menu.find_all {|item| item.cal_per_protein >= z && item.cal_per_protein <= a} 
+      b.each do |item|
+        puts "#{item.name} - #{item.cal_per_protein} calories per gram of protein"
       end 
   end
   
