@@ -481,6 +481,26 @@ class Cli
       b.each do |item|
         puts "#{item.name} - #{item.protein}g protein"
       end 
+    elsif y == 2
+      b = @selected_menu.find_all {|item| item.calories >= z && item.calories <= a} 
+      b.each do |item|
+        puts "#{item.name} - #{item.calories} calories"
+      end 
+     elsif y == 3
+      b = @selected_menu.find_all {|item| item.fat >= z && item.fat <= a} 
+      b.each do |item|
+        puts "#{item.name} - #{item.fat}g fat"
+      end 
+     elsif y == 4
+      b = @selected_menu.find_all {|item| item.sugar >= z && item.sugar <= a} 
+      b.each do |item|
+        puts "#{item.name} - #{item.sugar}g sugar"
+      end 
+     elsif y == 5
+      b = @selected_menu.find_all {|item| item.calories >= z && item.calories <= a} 
+      b.each do |item|
+        puts "#{item.name} - #{item.calories} calories"
+      end 
   end
   
 end 
