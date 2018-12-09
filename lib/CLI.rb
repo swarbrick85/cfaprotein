@@ -460,16 +460,16 @@ class Cli
     end
     
     puts "Please enter the number for the low end of the range you are looking for items within:"
-    z = gets.strip
+    z = gets.strip.to_f
     
-    until z == z.to_f
+    until z > 0 
       puts "Sorry, that is not an option here."
       puts "Please enter the number for the low end of the range you are looking for items within:"
       z = gets.strip
     end 
     
     puts "Please enter the number for the high end of the range you are looking for items within:"
-    a = gets.strip
+    a = gets.strip.to_f
     
     until a == a.to_f
       puts "Sorry, that is not an option here."
