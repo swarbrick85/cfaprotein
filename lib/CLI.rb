@@ -471,7 +471,7 @@ class Cli
     puts "Please enter the number for the high end of the range you are looking for items within:"
     a = gets.strip.to_f
     
-    until a == a.to_f
+    until a > z
       puts "Sorry, that is not an option here."
       puts "Please enter the number for the high end of the range you are looking for items within:"
       a = gets.strip
