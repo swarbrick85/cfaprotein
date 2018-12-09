@@ -183,10 +183,14 @@ class Cli
        end
     elsif y == 11 
        f = (@selected_menu.sort_by {|item| item.pct_cal_by_tc}).reverse
-       display_menu(f)
+       f.each do |item|
+        puts "#{item.name} - #{item.pct_cal_by_tc}% of calories from total carbs"
+       end
     elsif y == 12 
        f = (@selected_menu.sort_by {|item| item.cal_per_protein}).reverse
-       display_menu(f)
+       f.each do |item|
+        puts "#{item.name} - #{item.cal_per_protein} calories per gram of protein"
+       end
     elsif y == 30 
       start 
     end 
