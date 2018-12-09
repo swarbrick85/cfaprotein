@@ -33,8 +33,18 @@ class Cli
   end
   
   def list_attributes
-    puts "1. protein"
-    puts "2. "
+    puts "1. protein (g)"
+    puts "2. calories"
+    puts "3. fat (g)"
+    puts "4. sugar (g)"
+    puts "5. complex carbs (g)"
+    puts "6. total carbs (g)"
+    puts "7. percentage of calories from protein"
+    puts "8. percentage of calories from fat"
+    puts "9. percentage of calories from sugar"
+    puts "10. percentage of calories from complex carbs"
+    puts "11. percentage of calories from total carbs"
+    puts "12. calories per gram of protein"
   end
   
   def start 
