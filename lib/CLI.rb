@@ -119,8 +119,16 @@ class Cli
       @selected_attr = "calories"
     elsif y == 3 
       @selected_attr = "fat"
-    elsif y ==
-    
+    elsif y == 4 
+      @selected_attr = "sugar"
+    elsif y == 5 
+      @selected_attr = "complex_carbs"
+    elsif y == 6 
+      @selected_attr = "total_carbs"
+    elsif y == 7 
+      @selected_attr = "pct_cal_by_protein"
+    elsif y == 8 
+      @selected_attr = "pct_cal_by_fat"
   end 
   
   def individual_item_path 
