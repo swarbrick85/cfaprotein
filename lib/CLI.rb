@@ -24,16 +24,6 @@ class Cli
     puts "6.  Breakfast Menu"
   end 
   
-  def sort_asc(item_all_class_variable, attribute)
-    x = item_all_class_variable.sort_by {|item| item.attribute}
-    x
-  end
-  
-  def sort_desc(item_all_class_variable, attribute)
-    x = (item_all_class_variable.sort_by {|item| item.attribute}).reverse 
-    x
-  end
-  
   def list_attributes
     puts "1.  protein (g)"
     puts "2.  calories"
