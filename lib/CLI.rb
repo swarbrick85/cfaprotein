@@ -133,10 +133,14 @@ class Cli
        end 
     if y == 1 
       f = (@selected_menu.sort_by {|item| item.protein}).reverse
-      display_menu(f)
+      f.each do |item|
+        puts "#{item.name} - #{item.protein} g protein"
+      end 
     elsif y == 2 
        f = (@selected_menu.sort_by {|item| item.calories}).reverse
-       display_menu(f)
+       f.each do |item|
+        puts "#{item.name} - #{item.calories} calories"
+       end
     elsif y == 3 
        f = (@selected_menu.sort_by {|item| item.fat}).reverse
        display_menu(f)
@@ -185,10 +189,14 @@ class Cli
        end 
     if y == 1 
       f = @selected_menu.sort_by {|item| item.protein}
-      display_menu(f)
+      f.each do |item|
+        puts "#{item.name} - #{item.protein} g protein"
+      end 
     elsif y == 2 
        f = @selected_menu.sort_by {|item| item.calories}  
-       display_menu(f)
+       f.each do |item|
+        puts "#{item.name} - #{item.calories} calories"
+       end
     elsif y == 3 
        f = @selected_menu.sort_by {|item| item.fat}
        display_menu(f)
