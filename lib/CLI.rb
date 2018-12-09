@@ -2,7 +2,7 @@ require_relative './cfaprotein.rb'
 
 class Cli 
   
-  attr_accessor :selected_menu, :selected_attr, :selected_asc_desc
+  attr_accessor :selected_menu, :selected_attr
   
   def display_menu(item_all_class_variable)
     a = 1 
@@ -153,7 +153,10 @@ class Cli
       puts "30. Start the app over"
     end 
     if z == "1"
-      
+      sort_desc(@selected_menu, @selected_attr)
+    elsif z == "2"
+      sort_asc(@selected_menu, @selected_attr)
+    end 
   end 
   
   def individual_item_path 
