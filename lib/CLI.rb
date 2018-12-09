@@ -414,7 +414,8 @@ class Cli
     end
   end 
 
-  
-  
+  def find_in_range
+    
+  end
   
 end 
