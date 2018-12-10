@@ -416,7 +416,6 @@ class Cli
   end 
 
   def find_in_range
-    puts "Please select a menu:"
     list_menus
     puts "7.  Entire menu"
     puts "30. Start the app over"
