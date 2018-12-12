@@ -101,13 +101,6 @@ class Cli
     gets.strip.to_f
   end 
   
-  def final_display_desc(nutr_attr)
-    f = (@selected_menu.sort_by {|item| item.protein}).reverse
-      f.each do |item|
-        puts "#{item.name} - #{item.nutr_attr}g protein"
-      end 
-  end 
-  
   def asc_desc
     list_menus
     puts "7.  The entire menu"
@@ -149,7 +142,10 @@ class Cli
          y = asc_desc_attr_input
        end 
     if y == 1 
-      final_display_desc(protein)
+      f = (@selected_menu.sort_by {|item| item.protein}).reverse
+      f.each do |item|
+        puts "#{item.name} - #{item.protein}g protein"
+      end 
     elsif y == 2 
        f = (@selected_menu.sort_by {|item| item.calories}).reverse
        f.each do |item|
