@@ -142,63 +142,63 @@ class Cli
          input3 = asc_desc_attr_input
        end 
     if input3 == 1 
-      f = (@selected_menu.sort_by {|item| item.protein}).reverse
-      f.each do |item|
+      sorted = (@selected_menu.sort_by {|item| item.protein}).reverse
+      sorted.each do |item|
         puts "#{item.name} - #{item.protein}g protein"
       end 
     elsif input3 == 2 
-       f = (@selected_menu.sort_by {|item| item.calories}).reverse
-       f.each do |item|
+       sorted = (@selected_menu.sort_by {|item| item.calories}).reverse
+       sorted.each do |item|
         puts "#{item.name} - #{item.calories} calories"
        end
     elsif input3 == 3 
-       f = (@selected_menu.sort_by {|item| item.fat}).reverse
-       f.each do |item|
+       sorted = (@selected_menu.sort_by {|item| item.fat}).reverse
+       sorted.each do |item|
         puts "#{item.name} - #{item.fat}g fat"
        end
     elsif input3 == 4 
-       f = (@selected_menu.sort_by {|item| item.sugar}).reverse
-       f.each do |item|
+       sorted = (@selected_menu.sort_by {|item| item.sugar}).reverse
+       sorted.each do |item|
         puts "#{item.name} - #{item.sugar}g sugar"
        end
     elsif input3 == 5 
-       f = (@selected_menu.sort_by {|item| item.complex_carbs}).reverse
-       f.each do |item|
+       sorted = (@selected_menu.sort_by {|item| item.complex_carbs}).reverse
+       sorted.each do |item|
         puts "#{item.name} - #{item.complex_carbs}g complex carbs"
        end
     elsif input3 == 6 
-       f = (@selected_menu.sort_by {|item| item.total_carbs}).reverse
-       f.each do |item|
+       sorted = (@selected_menu.sort_by {|item| item.total_carbs}).reverse
+       sorted.each do |item|
         puts "#{item.name} - #{item.total_carbs}g total carbs"
        end
     elsif input3 == 7 
-       f = (@selected_menu.sort_by {|item| item.pct_cal_by_protein}).reverse
-       f.each do |item|
+       sorted = (@selected_menu.sort_by {|item| item.pct_cal_by_protein}).reverse
+       sorted.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_protein}% of calories from protein"
        end
     elsif input3 == 8 
-       f = (@selected_menu.sort_by {|item| item.pct_cal_by_fat}).reverse
-       f.each do |item|
+       sorted = (@selected_menu.sort_by {|item| item.pct_cal_by_fat}).reverse
+       sorted.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_fat}% of calories from fat"
        end
     elsif input3 == 9  
-       f = (@selected_menu.sort_by {|item| item.pct_cal_by_sc}).reverse
-       f.each do |item|
+       sorted = (@selected_menu.sort_by {|item| item.pct_cal_by_sc}).reverse
+       sorted.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_sc}% of calories from sugar"
        end
     elsif input3 == 10 
-       f = (@selected_menu.sort_by {|item| item.pct_cal_by_cc}).reverse
-       f.each do |item|
+       sorted = (@selected_menu.sort_by {|item| item.pct_cal_by_cc}).reverse
+       sorted.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_cc}% of calories from complex carbs"
        end
     elsif input3 == 11 
-       f = (@selected_menu.sort_by {|item| item.pct_cal_by_tc}).reverse
-       f.each do |item|
+       sorted = (@selected_menu.sort_by {|item| item.pct_cal_by_tc}).reverse
+       sorted.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_tc}% of calories from total carbs"
        end
     elsif input3 == 12 
-       f = (@selected_menu.sort_by {|item| item.cal_per_protein}).reverse
-       f.each do |item|
+       sorted = (@selected_menu.sort_by {|item| item.cal_per_protein}).reverse
+       sorted.each do |item|
         puts "#{item.name} - #{item.cal_per_protein} calories per gram of protein"
        end
     elsif input3 == 99 
