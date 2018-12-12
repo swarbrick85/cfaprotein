@@ -128,75 +128,75 @@ class Cli
       start 
     end 
    
-    z = asc_desc_input 
-    until (z == "1" || z == "2" || z == "99")
+    input2 = asc_desc_input 
+    until (input2 == "1" || input2 == "2" || input2 == "99")
       puts "I'm sorry, that's not an option here."
-      z = asc_desc_input 
+      input2 = asc_desc_input 
     end 
     
-    if z == "1"
+    if input2 == "1"
       
-       y = asc_desc_attr_input
-       until ((y == y.to_i && y > 0 && y < 13) || (y == 99))
+       input3 = asc_desc_attr_input
+       until ((input3 == input3.to_i && input3 > 0 && input3 < 13) || (input3 == 99))
          puts "I'm sorry, that's not an option here."
-         y = asc_desc_attr_input
+         input3 = asc_desc_attr_input
        end 
-    if y == 1 
+    if input3 == 1 
       f = (@selected_menu.sort_by {|item| item.protein}).reverse
       f.each do |item|
         puts "#{item.name} - #{item.protein}g protein"
       end 
-    elsif y == 2 
+    elsif input3 == 2 
        f = (@selected_menu.sort_by {|item| item.calories}).reverse
        f.each do |item|
         puts "#{item.name} - #{item.calories} calories"
        end
-    elsif y == 3 
+    elsif input3 == 3 
        f = (@selected_menu.sort_by {|item| item.fat}).reverse
        f.each do |item|
         puts "#{item.name} - #{item.fat}g fat"
        end
-    elsif y == 4 
+    elsif input3 == 4 
        f = (@selected_menu.sort_by {|item| item.sugar}).reverse
        f.each do |item|
         puts "#{item.name} - #{item.sugar}g sugar"
        end
-    elsif y == 5 
+    elsif input3 == 5 
        f = (@selected_menu.sort_by {|item| item.complex_carbs}).reverse
        f.each do |item|
         puts "#{item.name} - #{item.complex_carbs}g complex carbs"
        end
-    elsif y == 6 
+    elsif input3 == 6 
        f = (@selected_menu.sort_by {|item| item.total_carbs}).reverse
        f.each do |item|
         puts "#{item.name} - #{item.total_carbs}g total carbs"
        end
-    elsif y == 7 
+    elsif input3 == 7 
        f = (@selected_menu.sort_by {|item| item.pct_cal_by_protein}).reverse
        f.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_protein}% of calories from protein"
        end
-    elsif y == 8 
+    elsif input3 == 8 
        f = (@selected_menu.sort_by {|item| item.pct_cal_by_fat}).reverse
        f.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_fat}% of calories from fat"
        end
-    elsif y == 9  
+    elsif input3 == 9  
        f = (@selected_menu.sort_by {|item| item.pct_cal_by_sc}).reverse
        f.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_sc}% of calories from sugar"
        end
-    elsif y == 10 
+    elsif input3 == 10 
        f = (@selected_menu.sort_by {|item| item.pct_cal_by_cc}).reverse
        f.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_cc}% of calories from complex carbs"
        end
-    elsif y == 11 
+    elsif input3 == 11 
        f = (@selected_menu.sort_by {|item| item.pct_cal_by_tc}).reverse
        f.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_tc}% of calories from total carbs"
        end
-    elsif y == 12 
+    elsif input3 == 12 
        f = (@selected_menu.sort_by {|item| item.cal_per_protein}).reverse
        f.each do |item|
         puts "#{item.name} - #{item.cal_per_protein} calories per gram of protein"
@@ -205,7 +205,7 @@ class Cli
       start 
     end 
     
-    elsif z == "2"
+    elsif input2 == "2"
        
        puts "Please select an attribute by which to sort this menu:"
        list_attributes
@@ -282,13 +282,13 @@ class Cli
       start 
     end 
     
-    elsif z == "99"
+    elsif input2 == "99"
       start 
     end 
    
    puts " "
    puts "Enter anything to start the app over"
-   q = gets.strip
+   gets.strip
    start 
    
   end 
