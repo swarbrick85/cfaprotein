@@ -316,20 +316,20 @@ class Cli
   def individual_item_path 
     list_menus
     puts "99. Start the app over"
-    x = gets.strip 
-    if x == "1" 
+    input = gets.strip 
+    if input == "1" 
       individual_item_path_post_menu_select(Item.entrees_all_orig)
-    elsif x == "2" 
+    elsif input == "2" 
       individual_item_path_post_menu_select(Item.salads_all_orig)
-    elsif x == "3" 
+    elsif input == "3" 
       individual_item_path_post_menu_select(Item.sides_all_orig)
-    elsif x == "4" 
+    elsif input == "4" 
       individual_item_path_post_menu_select(Item.treats_all_orig)
-    elsif x == "5" 
+    elsif input == "5" 
       individual_item_path_post_menu_select(Item.drinks_all_orig)
-    elsif x == "6" 
+    elsif input == "6" 
       individual_item_path_post_menu_select(Item.breakfast_all_orig)
-    elsif x == "99" 
+    elsif input == "99" 
       start 
     else 
       puts "I'm sorry, that's not an option here."
