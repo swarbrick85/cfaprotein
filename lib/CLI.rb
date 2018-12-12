@@ -390,20 +390,20 @@ class Cli
     end 
     
     puts "Please enter the number for the high end of the range you are looking for items within:"
-    a = gets.strip.to_f
+    input4 = gets.strip.to_f
     
-    until a > z
+    until input4 > input3
       puts "Sorry, that is not an option here."
       puts "Please enter the number for the high end of the range you are looking for items within:"
-      a = gets.strip
+      input4 = gets.strip.to_f
     end 
     
-    if y == 1
-      b = @selected_menu.find_all {|item| item.protein >= z && item.protein <= a} 
+    if input2 == 1
+      b = @selected_menu.find_all {|item| item.protein >= input3 && item.protein <= input4} 
       b.each do |item|
         puts "#{item.name} - #{item.protein}g protein"
       end 
-    elsif y == 2
+    elsif input2 == 2
       b = @selected_menu.find_all {|item| item.calories >= z && item.calories <= a} 
       b.each do |item|
         puts "#{item.name} - #{item.calories} calories"
