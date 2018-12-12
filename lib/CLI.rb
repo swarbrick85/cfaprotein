@@ -322,23 +322,7 @@ class Cli
     elsif x == "2" 
       individual_item_path_post_menu_select(Item.salads_all_orig, 4)
     elsif x == "3" 
-      display_menu(Item.sides_all_orig)
-        w = gets.strip.to_f  
-          until (w.to_f == w.to_i && (w > 0 && w < 9)) || w == 99
-            puts "I'm sorry, that's not an option here."
-            display_menu(Item.sides_all_orig)
-            w = gets.strip.to_f
-          end
-          if w == 99 
-            start 
-          end
-        c = 1 
-          8.times {
-            if w == c 
-              display_item(Item.sides_all_orig[c-1])
-            end 
-            c += 1
-          }
+      individual_item_path_post_menu_select(Item.sides_all_orig, 8)
     elsif x == "4" 
       display_menu(Item.treats_all_orig)
         v = gets.strip.to_f  
