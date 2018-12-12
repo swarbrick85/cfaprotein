@@ -82,10 +82,10 @@ class Scraper
     counter = 0 
      num_scrapable_items.times{
       if (front_page.css("td")[first_name_location + 10 + (@row_width * a)].text != "0")
-         z = front_page.css("td")[first_name_location + (@row_width * counter)].text 
-         z[0...11] = ""
+         name_in_process = front_page.css("td")[first_name_location + (@row_width * counter)].text 
+         name_in_process[0...11] = ""
          
-         name = z 
+         name = name_in_process 
          calories = front_page.css("td")[first_name_location + 1 + (@row_width * counter)].text.to_f.round(1)
          fat = front_page.css("td")[first_name_location + 2 + (@row_width * counter)].text.to_f.round(1)
          total_carbs = front_page.css("td")[first_name_location + 7 + (@row_width * counter)].text.to_f.round(1)
@@ -95,7 +95,7 @@ class Scraper
          Item.new(item_all_class_variable, item_all_original_class_variable, name, protein, calories, fat, sugar, total_carbs)
        end 
        
-      a += 1
+      counter += 1
     }
     nil
   end
