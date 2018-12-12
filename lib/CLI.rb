@@ -8,7 +8,7 @@ class Cli
     counter = 1 
     puts "Please select one of the following options:"
     item_all_class_variable.each do |item|
-      puts "#{a}. #{item.name}"
+      puts "#{counter}. #{item.name}"
       counter += 1 
     end 
     puts "99. Start the app over"
