@@ -11,7 +11,7 @@ class Cli
       puts "#{a}. #{item.name}"
       a += 1 
     end 
-    puts "30. Start the app over"
+    puts "99. Start the app over"
   end 
   
   def list_menus 
@@ -89,9 +89,9 @@ class Cli
   def asc_desc
     list_menus
     puts "7.  The entire menu"
-    puts "30. Start the app over"
+    puts "99. Start the app over"
     x = gets.strip.to_f 
-    if x != x.to_i || x < 1 || x > 30 || (x > 7 && x < 30)
+    if x != x.to_i || x < 1 || x > 99 || (x > 7 && x < 99)
       puts "I'm sorry, that's not an option here."
       asc_desc
     end 
@@ -109,7 +109,7 @@ class Cli
       @selected_menu = Item.breakfast_all 
     elsif x == 7 
       @selected_menu = Item.all 
-    elsif x == 30 
+    elsif x == 99 
       start 
     end 
    
@@ -118,14 +118,14 @@ class Cli
     puts "Please select from the following:"
     puts "1.  Sort this menu in descending order"
     puts "2.  Sort this menu in ascending order"
-    puts "30. Start the app over"
+    puts "99. Start the app over"
     z = gets.strip 
-    until (z == "1" || z == "2" || z == "30")
+    until (z == "1" || z == "2" || z == "99")
       puts "I'm sorry, that's not an option here."
       puts "Please select from the following:"
       puts "1.  Sort in descending order"
       puts "2.  Sort in ascending order"
-      puts "30. Start the app over"
+      puts "99. Start the app over"
       z = gets.strip 
     end 
     
@@ -133,13 +133,13 @@ class Cli
       
       puts "Please select an attribute by which to sort this menu:"
        list_attributes
-       puts "30. start the app over"
+       puts "99. start the app over"
        y = gets.strip.to_f
-       until ((y == y.to_i && y > 0 && y < 13) || (y == 30))
+       until ((y == y.to_i && y > 0 && y < 13) || (y == 99))
          puts "I'm sorry, that's not an option here."
          puts "Please select an attribute by which to sort this menu:"
          list_attributes
-         puts "30. start the app over"
+         puts "99. start the app over"
          y = gets.strip.to_f
        end 
     if y == 1 
@@ -202,7 +202,7 @@ class Cli
        f.each do |item|
         puts "#{item.name} - #{item.cal_per_protein} calories per gram of protein"
        end
-    elsif y == 30 
+    elsif y == 99 
       start 
     end 
     
