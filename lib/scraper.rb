@@ -6,19 +6,19 @@ class Scraper
   
   attr_accessor :row_width
   
-  @@breakfast_scrapable_item_num = 15
-  @@entrees_scrapable_item_num = 17 
-  @@salads_scrapable_item_num = 4
-  @@sides_scrapable_item_num = 10 
-  @@treats_scrapable_item_num = 18 
-  @@drinks_scrapable_item_num = 33
+  @breakfast_scrapable_item_num = 15
+  @entrees_scrapable_item_num = 17 
+  @salads_scrapable_item_num = 4
+  @sides_scrapable_item_num = 10 
+  @treats_scrapable_item_num = 18 
+  @drinks_scrapable_item_num = 33
   
-  @@breakfast_first_name_location = 3
-  @@entrees_first_name_location = 169 
-  @@salads_first_name_location = 357
-  @@sides_first_name_location = 402
-  @@treats_first_name_location = 513
-  @@drinks_first_name_location = 712
+  @breakfast_first_name_location = 3
+  @entrees_first_name_location = 169 
+  @salads_first_name_location = 357
+  @sides_first_name_location = 402
+  @treats_first_name_location = 513
+  @drinks_first_name_location = 712
 
   def front_page 
     doc = Nokogiri::HTML(open("https://www.nutritionix.com/chick-fil-a/menu/premium/"))
@@ -62,18 +62,22 @@ class Scraper
   
   def initialize 
     @row_width = 11 
-   
+    @breakfast_scrapable_item_num = 15
+    @entrees_scrapable_item_num = 17 
+    @salads_scrapable_item_num = 4
+    @sides_scrapable_item_num = 10 
+    @treats_scrapable_item_num = 18 
+    @drinks_scrapable_item_num = 33
+  
+    @breakfast_first_name_location = 3
+    @entrees_first_name_location = 169 
+    @salads_first_name_location = 357
+    @sides_first_name_location = 402
+    @treats_first_name_location = 513
+    @drinks_first_name_location = 712
   end
   
-  #
-  #
-  #
-  
   def create_menu(b, c, item_all_class_variable, item_all_original_class_variable)
-    
-      # b is number of items in that menu section 
-    # c is the location of the first name of the first item in that menu section 
-    # @row_width tells you how many spots are in each item's row, so to move from name to name within a menu section add @row_width. Same for protein to protein, etc. 
     
     a = 0 
      b.times{
@@ -95,8 +99,4 @@ class Scraper
     }
     nil
   end
-  
-  
-  
 end  
- 
