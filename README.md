@@ -22,7 +22,7 @@ Or install it yourself as:
 
 Instructions are given at the opening of the app. Just follow the instructions. If you make an invalid input, it won't break the app. Just keep going. 
 
-If items are removed from or added to the website, there are commented out instructions in the Scraper file to inform you of how to alter the code easily to match the website changes.
+It's a simple process to alter the code if items are added to or removed from the website.
 
 ## Development
 
