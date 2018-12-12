@@ -6,6 +6,20 @@ class Scraper
   
   attr_accessor :row_width
   
+  @@breakfast_scrapable_item_num
+  @@entrees_scrapable_item_num
+  @@salads_scrapable_item_num
+  @@sides_scrapable_item_num
+  @@treats_scrapable_item_num
+  @@drinks_scrapable_item_num
+  
+  @@breakfast_first_name_location
+  @@entrees_first_name_location
+  @@salads_first_name_location
+  @@sides_first_name_location
+  @@treats_first_name_location
+  @@drinks_first_name_location
+
   def front_page 
     doc = Nokogiri::HTML(open("https://www.nutritionix.com/chick-fil-a/menu/premium/"))
     doc 
