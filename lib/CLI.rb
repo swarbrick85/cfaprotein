@@ -201,7 +201,7 @@ class Cli
        f.each do |item|
         puts "#{item.name} - #{item.cal_per_protein} calories per gram of protein"
        end
-    elsif y == 99 
+    elsif input3 == 99 
       start 
     end 
     
@@ -210,75 +210,75 @@ class Cli
        puts "Please select an attribute by which to sort this menu:"
        list_attributes
        puts "99. start the app over"
-       y = gets.strip.to_f
-       until ((y == y.to_i && y > 0 && y < 13) || (y == 99))
+       input3 = gets.strip.to_f
+       until ((input3 == input3.to_i && input3 > 0 && input3 < 13) || (input3 == 99))
          puts "I'm sorry, that's not an option here."
          puts "Please select an attribute by which to sort this menu:"
          list_attributes
          puts "99. start the app over"
-         y = gets.strip.to_f
+         input3 = gets.strip.to_f
        end 
-    if y == 1 
+    if input3 == 1 
       f = @selected_menu.sort_by {|item| item.protein}
       f.each do |item|
         puts "#{item.name} - #{item.protein}g protein"
       end 
-    elsif y == 2 
+    elsif input3 == 2 
        f = @selected_menu.sort_by {|item| item.calories}  
        f.each do |item|
         puts "#{item.name} - #{item.calories} calories"
        end
-    elsif y == 3 
+    elsif input3 == 3 
        f = @selected_menu.sort_by {|item| item.fat}
        f.each do |item|
         puts "#{item.name} - #{item.fat}g fat"
        end
-    elsif y == 4 
+    elsif input3 == 4 
        f = @selected_menu.sort_by {|item| item.sugar}
        f.each do |item|
         puts "#{item.name} - #{item.sugar}g sugar"
        end
-    elsif y == 5 
+    elsif input3 == 5 
        f = @selected_menu.sort_by {|item| item.complex_carbs}
        f.each do |item|
         puts "#{item.name} - #{item.complex_carbs}g complex carbs"
        end
-    elsif y == 6 
+    elsif input3 == 6 
        f = @selected_menu.sort_by {|item| item.total_carbs}
        f.each do |item|
         puts "#{item.name} - #{item.total_carbs}g total carbs"
        end
-    elsif y == 7 
+    elsif input3 == 7 
        f = @selected_menu.sort_by {|item| item.pct_cal_by_protein}
        f.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_protein}% of calories from protein"
        end
-    elsif y == 8 
+    elsif input3 == 8 
        f = @selected_menu.sort_by {|item| item.pct_cal_by_fat}
        f.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_fat}% of calories from fat"
        end
-    elsif y == 9  
+    elsif input3 == 9  
        f = @selected_menu.sort_by {|item| item.pct_cal_by_sc}
        f.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_sc}% of calories from sugar"
        end
-    elsif y == 10 
+    elsif input3 == 10 
        f = @selected_menu.sort_by {|item| item.pct_cal_by_cc}
        f.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_cc}% of calories from complex carbs"
        end
-    elsif y == 11 
+    elsif input3 == 11 
        f = @selected_menu.sort_by {|item| item.pct_cal_by_tc}
        f.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_tc}% of calories from total carbs"
        end
-    elsif y == 12 
+    elsif input3 == 12 
        f = @selected_menu.sort_by {|item| item.cal_per_protein}
        f.each do |item|
         puts "#{item.name} - #{item.cal_per_protein} calories per gram of protein"
        end
-    elsif y == 99 
+    elsif input3 == 99 
       start 
     end 
     
