@@ -73,10 +73,8 @@ class Scraper
          total_carbs = front_page.css("td")[c + 7 + (@row_width * a)].text.to_f.round(1)
          sugar = front_page.css("td")[c + 9 + (@row_width * a)].text.to_f.round(1)
          protein = front_page.css("td")[c + 10 + (@row_width * a)].text.to_f.round(1)
-        
          
-         
-         Item.new(item_all_class_variable, item_all_original_class_variable, name, protein, calories, fat, sugar, complex_carbs, total_carbs)
+         Item.new(item_all_class_variable, item_all_original_class_variable, name, protein, calories, fat, sugar, total_carbs)
        end 
        
       a += 1
