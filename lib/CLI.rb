@@ -293,10 +293,10 @@ class Cli
    
   end 
   
-  def individual_item_path_post_menu_select(item_all_orig_class_var, num_items_menu)
+  def individual_item_path_post_menu_select(item_all_orig_class_var)
     display_menu(item_all_orig_class_var)
       y = gets.strip.to_f  
-        until (y.to_f == y.to_i && (y > 0 && y < num_items_menu + 1)) || y == 99
+        until (y.to_f == y.to_i && (y > 0 && y < item_all_orig_class_var.length + 1)) || y == 99
           puts "I'm sorry, that's not an option here."
           display_menu(item_all_orig_class_var)
           y = gets.strip.to_f
@@ -305,7 +305,7 @@ class Cli
           start 
         end 
         a = 1 
-          num_items_menu.times {
+          item_all_orig_class_var.length.times {
             if y == a 
               display_item(item_all_orig_class_var[a-1])
             end 
