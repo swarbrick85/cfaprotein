@@ -5,11 +5,11 @@ class Cli
   attr_accessor :selected_menu
   
   def display_menu(item_all_class_variable)
-    a = 1 
+    counter = 1 
     puts "Please select one of the following options:"
     item_all_class_variable.each do |item|
       puts "#{a}. #{item.name}"
-      a += 1 
+      counter += 1 
     end 
     puts "99. Start the app over"
   end 
@@ -73,12 +73,12 @@ class Cli
     puts "  1. I'd like to look at individual menu items."
     puts "  2. I'd like to list menu items according to an attribute, in ascending or descending order (for example, you can list menu items from the one most protein to the item with the least protein)."
     puts "  3. I'd like to find menu items within a range that I select for a given attribute."
-    x = gets.strip
-    if x == "1" 
+    input = gets.strip
+    if input == "1" 
       individual_item_path
-    elsif x == "2" 
+    elsif input == "2" 
       asc_desc
-    elsif x == "3"
+    elsif input == "3"
       find_in_range
     else 
       puts "I'm sorry, that's not an option here."
