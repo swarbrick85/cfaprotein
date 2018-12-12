@@ -318,7 +318,7 @@ class Cli
     puts "99. Start the app over"
     x = gets.strip 
     if x == "1" 
-      
+      individual_item_path_post_menu_select(Item.entrees_all_orig, 17)
     elsif x == "2" 
       display_menu(Item.salads_all_orig)
         z = gets.strip.to_f  
