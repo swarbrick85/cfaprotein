@@ -306,8 +306,8 @@ class Cli
         end 
         counter = 1 
           item_all_orig_class_var.length.times {
-            if input == a 
-              display_item(item_all_orig_class_var[a-1])
+            if input == counter 
+              display_item(item_all_orig_class_var[counter-1])
             end 
             counter += 1
           }
