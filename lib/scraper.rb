@@ -81,7 +81,7 @@ class Scraper
     
     counter = 0 
      num_scrapable_items.times{
-      if (front_page.css("td")[first_name_location + 10 + (@row_width * a)].text != "0")
+      if (front_page.css("td")[first_name_location + 10 + (@row_width * counter)].text != "0")
          name_in_process = front_page.css("td")[first_name_location + (@row_width * counter)].text 
          name_in_process[0...11] = ""
          
