@@ -19,14 +19,15 @@ class Item
     @sugar = sugar 
     @complex_carbs = complex_carbs 
     @total_carbs = total_carbs 
-     complex_carbs = (x.total_carbs - x.sugar).to_f.round(1)
+     
+    @complex_carbs = (total_carbs - sugar).to_f.round(1)
         
-         pct_cal_by_protein = (((x.protein * 4)/x.calories) * 100).round(1)
-         pct_cal_by_fat = (((x.fat * 9)/x.calories) * 100).round(1)
-         pct_cal_by_sc = (((x.sugar * 4)/x.calories) * 100).round(1)
-         pct_cal_by_cc = (((x.complex_carbs * 4)/x.calories) * 100).round(1)
-         pct_cal_by_tc = (((x.total_carbs * 4)/x.calories) * 100).round(1)
-         cal_per_protein = (x.calories/x.protein).round(1)
+    @pct_cal_by_protein = (((protein * 4)/calories) * 100).round(1)
+    @pct_cal_by_fat = (((fat * 9)/calories) * 100).round(1)
+    @pct_cal_by_sc = (((sugar * 4)/calories) * 100).round(1)
+    @pct_cal_by_cc = (((complex_carbs * 4)/calories) * 100).round(1)
+    @pct_cal_by_tc = (((total_carbs * 4)/calories) * 100).round(1)
+    @cal_per_protein = (calories/protein).round(1)
   end 
   
   
