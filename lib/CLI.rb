@@ -94,6 +94,13 @@ class Cli
     gets.strip
   end 
   
+  def asc_desc_attr_input
+    puts "Please select an attribute by which to sort this menu:"
+    list_attributes
+    puts "99. start the app over"
+    gets.strip.to_f
+  end 
+  
   def asc_desc
     list_menus
     puts "7.  The entire menu"
@@ -129,16 +136,10 @@ class Cli
     
     if z == "1"
       
-      puts "Please select an attribute by which to sort this menu:"
-       list_attributes
-       puts "99. start the app over"
-       y = gets.strip.to_f
+       y = asc_desc_attr_input
        until ((y == y.to_i && y > 0 && y < 13) || (y == 99))
          puts "I'm sorry, that's not an option here."
-         puts "Please select an attribute by which to sort this menu:"
-         list_attributes
-         puts "99. start the app over"
-         y = gets.strip.to_f
+         y = asc_desc_attr_input
        end 
     if y == 1 
       f = (@selected_menu.sort_by {|item| item.protein}).reverse
