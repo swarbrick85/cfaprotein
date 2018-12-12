@@ -318,23 +318,7 @@ class Cli
     puts "99. Start the app over"
     x = gets.strip 
     if x == "1" 
-      display_menu(Item.entrees_all_orig)
-      y = gets.strip.to_f  
-        until (y.to_f == y.to_i && (y > 0 && y < 18)) || y == 99
-          puts "I'm sorry, that's not an option here."
-          display_menu(Item.entrees_all_orig)
-          y = gets.strip.to_f
-        end 
-        if y == 99 
-          start 
-        end 
-        a = 1 
-          17.times {
-            if y == a 
-              display_item(Item.entrees_all_orig[a-1])
-            end 
-            a += 1
-          }
+      
     elsif x == "2" 
       display_menu(Item.salads_all_orig)
         z = gets.strip.to_f  
