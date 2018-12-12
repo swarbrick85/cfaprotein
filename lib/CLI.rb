@@ -318,17 +318,17 @@ class Cli
     puts "99. Start the app over"
     x = gets.strip 
     if x == "1" 
-      individual_item_path_post_menu_select(Item.entrees_all_orig, 17)
+      individual_item_path_post_menu_select(Item.entrees_all_orig)
     elsif x == "2" 
-      individual_item_path_post_menu_select(Item.salads_all_orig, 4)
+      individual_item_path_post_menu_select(Item.salads_all_orig)
     elsif x == "3" 
-      individual_item_path_post_menu_select(Item.sides_all_orig, 8)
+      individual_item_path_post_menu_select(Item.sides_all_orig)
     elsif x == "4" 
-      individual_item_path_post_menu_select(Item.treats_all_orig, 18)
+      individual_item_path_post_menu_select(Item.treats_all_orig)
     elsif x == "5" 
-      individual_item_path_post_menu_select(Item.drinks_all_orig, 7)
+      individual_item_path_post_menu_select(Item.drinks_all_orig)
     elsif x == "6" 
-      individual_item_path_post_menu_select(Item.breakfast_all_orig, 15)
+      individual_item_path_post_menu_select(Item.breakfast_all_orig)
     elsif x == "99" 
       start 
     else 
