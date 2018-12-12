@@ -27,27 +27,27 @@ class Scraper
   end 
   
   def create_breakfast_menu
-    create_menu(breakfast_scrapable_item_num, breakfast_first_name_location, Item.breakfast_all, Item.breakfast_all_orig)
+    create_menu(@breakfast_scrapable_item_num, @breakfast_first_name_location, Item.breakfast_all, Item.breakfast_all_orig)
   end 
   
   def create_entrees_menu
-    create_menu(entrees_scrapable_item_num, entrees_first_name_location, Item.entrees_all, Item.entrees_all_orig)
+    create_menu(@entrees_scrapable_item_num, @entrees_first_name_location, Item.entrees_all, Item.entrees_all_orig)
   end 
   
   def create_salads_menu
-     create_menu(salads_scrapable_item_num, salads_first_name_location, Item.salads_all, Item.salads_all_orig)
+     create_menu(@salads_scrapable_item_num, @salads_first_name_location, Item.salads_all, Item.salads_all_orig)
   end 
   
   def create_sides_menu
-    create_menu(sides_scrapable_item_num, salads_first_name_location, Item.sides_all, Item.sides_all_orig)
+    create_menu(@sides_scrapable_item_num, @salads_first_name_location, Item.sides_all, Item.sides_all_orig)
   end 
   
   def create_treats_menu
-    create_menu(treats_scrapable_item_num, treats_first_name_location, Item.treats_all, Item.treats_all_orig)
+    create_menu(@treats_scrapable_item_num, @treats_first_name_location, Item.treats_all, Item.treats_all_orig)
   end 
   
   def create_drinks_menu
-    create_menu(drinks_scrapable_item_num, drinks_first_name_location, Item.drinks_all, Item.drinks_all_orig)
+    create_menu(@drinks_scrapable_item_num, @drinks_first_name_location, Item.drinks_all, Item.drinks_all_orig)
   end 
   
   
