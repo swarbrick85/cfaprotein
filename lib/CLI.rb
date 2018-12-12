@@ -324,41 +324,9 @@ class Cli
     elsif x == "3" 
       individual_item_path_post_menu_select(Item.sides_all_orig, 8)
     elsif x == "4" 
-      display_menu(Item.treats_all_orig)
-        v = gets.strip.to_f  
-          until (v.to_f == v.to_i && (v > 0 && v < 19)) || v == 99
-            puts "I'm sorry, that's not an option here."
-            display_menu(Item.treats_all_orig)
-            v = gets.strip.to_f
-          end
-          if v == 99 
-            start 
-          end
-        d = 1 
-          18.times {
-            if v == d 
-              display_item(Item.treats_all_orig[d-1])
-            end 
-            d += 1
-          }
+      individual_item_path_post_menu_select(Item.treats_all_orig, 18)
     elsif x == "5" 
-      display_menu(Item.drinks_all_orig)
-        u = gets.strip.to_f  
-          until (u.to_f == u.to_i && (u > 0 && u < 8)) || u == 99
-            puts "I'm sorry, that's not an option here."
-            display_menu(Item.drinks_all_orig)
-            u = gets.strip.to_f
-          end  
-          if u == 99 
-            start 
-          end
-        e = 1 
-          7.times {
-            if u == e 
-              display_item(Item.drinks_all_orig[e-1])
-            end 
-            e += 1
-          }
+      individual_item_path_post_menu_select(Item.drinks_all_orig, 7)
     elsif x == "6" 
       display_menu(Item.breakfast_all_orig)
         t = gets.strip.to_f  
