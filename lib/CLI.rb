@@ -408,52 +408,52 @@ class Cli
       b.each do |item|
         puts "#{item.name} - #{item.calories} calories"
       end 
-     elsif y == 3
+     elsif input2 == 3
       b = @selected_menu.find_all {|item| item.fat >= z && item.fat <= a} 
       b.each do |item|
         puts "#{item.name} - #{item.fat}g fat"
       end 
-     elsif y == 4
+     elsif input2 == 4
       b = @selected_menu.find_all {|item| item.sugar >= z && item.sugar <= a} 
       b.each do |item|
         puts "#{item.name} - #{item.sugar}g sugar"
       end 
-     elsif y == 5
+     elsif input2 == 5
       b = @selected_menu.find_all {|item| item.complex_carbs >= z && item.complex_carbs <= a} 
       b.each do |item|
         puts "#{item.name} - #{item.complex_carbs}g complex carbs"
       end 
-     elsif y == 6
+     elsif input2 == 6
       b = @selected_menu.find_all {|item| item.total_carbs >= z && item.total_carbs <= a} 
       b.each do |item|
         puts "#{item.name} - #{item.total_carbs}g total carbs"
       end 
-     elsif y == 7
+     elsif input2 == 7
       b = @selected_menu.find_all {|item| item.pct_cal_by_protein >= z && item.pct_cal_by_protein <= a} 
       b.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_protein}% of calories from protein"
       end 
-     elsif y == 8
+     elsif input2 == 8
       b = @selected_menu.find_all {|item| item.pct_cal_by_fat >= z && item.pct_cal_by_fat <= a} 
       b.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_fat}% of calories from fat"
       end 
-     elsif y == 9
+     elsif input2 == 9
       b = @selected_menu.find_all {|item| item.pct_cal_by_sc >= z && item.pct_cal_by_sc <= a} 
       b.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_sc}% of calories from sugar"
       end 
-     elsif y == 10
+     elsif input2 == 10
       b = @selected_menu.find_all {|item| item.pct_cal_by_cc >= z && item.pct_cal_by_cc <= a} 
       b.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_cc}% of calories from complex carbs"
       end 
-     elsif y == 11
+     elsif input2 == 11
       b = @selected_menu.find_all {|item| item.pct_cal_by_tc >= z && item.pct_cal_by_tc <= a} 
       b.each do |item|
         puts "#{item.name} - #{item.pct_cal_by_tc}% of calories from total carbs"
       end 
-     elsif y == 12
+     elsif input2 == 12
       b = @selected_menu.find_all {|item| item.cal_per_protein >= z && item.cal_per_protein <= a} 
       b.each do |item|
         puts "#{item.name} - #{item.cal_per_protein} calories per gram of protein"
