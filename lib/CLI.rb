@@ -328,24 +328,7 @@ class Cli
     elsif x == "5" 
       individual_item_path_post_menu_select(Item.drinks_all_orig, 7)
     elsif x == "6" 
-      display_menu(Item.breakfast_all_orig)
-        t = gets.strip.to_f  
-          until (t.to_f == t.to_i && (t > 0 && t < 16)) || t == 99
-            puts "I'm sorry, that's not an option here."
-            display_menu(Item.breakfast_all_orig)
-            t = gets.strip.to_f
-          end  
-          if t == 99 
-            start 
-          end
-        f = 1 
-          15.times {
-            if t == f 
-              display_item(Item.breakfast_all_orig[f-1])
-            end 
-            f += 1
-          }
-          
+      individual_item_path_post_menu_select(Item.breakfast_all_orig, 15)
     elsif x == "99" 
       start 
     else 
