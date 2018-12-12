@@ -83,7 +83,7 @@ class Scraper
          pct_cal_by_tc = (((x.total_carbs * 4)/x.calories) * 100).round(1)
          cal_per_protein = (x.calories/x.protein).round(1) 
          
-         Item.new(item_all_class_variable, item_all_original_class_variable, )
+         Item.new(item_all_class_variable, item_all_original_class_variable, name, protein, calories, fat, sugar, complex_carbs, total_carbs, pct_cal_by_protein, pct_cal_by_fat, pct_cal_by_sc, pct_cal_by_cc, pct_cal_by_tc, cal_per_protein)
        end 
        
       a += 1
