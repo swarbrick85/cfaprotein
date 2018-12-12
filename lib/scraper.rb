@@ -39,7 +39,7 @@ class Scraper
   end 
   
   def create_sides_menu
-    create_menu(@sides_scrapable_item_num, @salads_first_name_location, Item.sides_all, Item.sides_all_orig)
+    create_menu(@sides_scrapable_item_num, @sides_first_name_location, Item.sides_all, Item.sides_all_orig)
   end 
   
   def create_treats_menu
