@@ -86,6 +86,14 @@ class Cli
     end 
   end 
 
+  def asc_desc_input
+    puts "Please select from the following:"
+    puts "1.  Sort this menu in descending order"
+    puts "2.  Sort this menu in ascending order"
+    puts "99. Start the app over"
+    gets.strip
+  end 
+  
   def asc_desc
     list_menus
     puts "7.  The entire menu"
@@ -113,20 +121,10 @@ class Cli
       start 
     end 
    
-   
-   
-    puts "Please select from the following:"
-    puts "1.  Sort this menu in descending order"
-    puts "2.  Sort this menu in ascending order"
-    puts "99. Start the app over"
-    z = gets.strip 
+    z = asc_desc_input 
     until (z == "1" || z == "2" || z == "99")
       puts "I'm sorry, that's not an option here."
-      puts "Please select from the following:"
-      puts "1.  Sort in descending order"
-      puts "2.  Sort in ascending order"
-      puts "99. Start the app over"
-      z = gets.strip 
+      z = asc_desc_input 
     end 
     
     if z == "1"
