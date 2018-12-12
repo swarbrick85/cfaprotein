@@ -418,9 +418,9 @@ class Cli
   def find_in_range
     list_menus
     puts "7.  Entire menu"
-    puts "30. Start the app over"
+    puts "99. Start the app over"
     x = gets.strip.to_f
-    if x != x.to_i || x < 1 || x > 30 || (x > 7 && x < 30)
+    if x != x.to_i || x < 1 || x > 99 || (x > 7 && x < 99)
       puts "I'm sorry, that's not an option here."
       find_in_range
     end 
@@ -438,23 +438,23 @@ class Cli
       @selected_menu = Item.breakfast_all_orig 
     elsif x == 7 
       @selected_menu = Item.all_orig  
-    elsif x == 30 
+    elsif x == 99 
       start 
     end 
     
     puts "Please select the nutritional attribute you'd like to find items for:"
     list_attributes
-    puts "30. Start the app over"
+    puts "99. Start the app over"
     y = gets.strip.to_f
      
-    until ((y == y.to_i && y > 0 && y < 13) || y == 30) 
+    until ((y == y.to_i && y > 0 && y < 13) || y == 99) 
       puts "Sorry, that is not an option here."
       list_attributes
-      puts "30. Start the app over"
+      puts "99. Start the app over"
       y = gets.strip.to_f
     end 
     
-    if y == 30 
+    if y == 99 
       start
     end
     
