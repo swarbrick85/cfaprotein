@@ -20,7 +20,11 @@ class Item
     @complex_carbs = complex_carbs 
     @total_carbs = total_carbs 
     @pct_cal_by_protein = pct_cal_by_protein 
-    @
+    @pct_cal_by_fat = pct_cal_by_fat 
+    @pct_cal_by_sc = pct_cal_by_sc 
+    @pct_cal_by_cc = pct_cal_by_cc 
+    @pct_cal_by_tc = pct_cal_by_tc 
+    @cal_per_protein = cal_per_protein
   end 
   
   
