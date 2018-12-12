@@ -367,26 +367,26 @@ class Cli
     puts "Please select the nutritional attribute you'd like to find items for:"
     list_attributes
     puts "99. Start the app over"
-    y = gets.strip.to_f
+    input2 = gets.strip.to_f
      
-    until ((y == y.to_i && y > 0 && y < 13) || y == 99) 
+    until ((input2 == input2.to_i && input2 > 0 && input2 < 13) || input2 == 99) 
       puts "Sorry, that is not an option here."
       list_attributes
       puts "99. Start the app over"
-      y = gets.strip.to_f
+      input2 = gets.strip.to_f
     end 
     
-    if y == 99 
+    if input2 == 99 
       start
     end
     
     puts "Please enter the number for the low end of the range you are looking for items within:"
-    z = gets.strip.to_f
+    input3 = gets.strip.to_f
     
-    until z > 0 
+    until input3 > 0 
       puts "Sorry, that is not an option here."
       puts "Please enter the number for the low end of the range you are looking for items within:"
-      z = gets.strip
+      input3 = gets.strip.to_f
     end 
     
     puts "Please enter the number for the high end of the range you are looking for items within:"
