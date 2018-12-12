@@ -105,26 +105,26 @@ class Cli
     list_menus
     puts "7.  The entire menu"
     puts "99. Start the app over"
-    x = gets.strip.to_f 
-    if x != x.to_i || x < 1 || x > 99 || (x > 7 && x < 99)
+    input = gets.strip.to_f 
+    if input != input.to_i || input < 1 || input > 99 || (input > 7 && input < 99)
       puts "I'm sorry, that's not an option here."
       asc_desc
     end 
-    if x == 1 
+    if input == 1 
       @selected_menu = Item.entrees_all 
-    elsif x == 2 
+    elsif input == 2 
       @selected_menu = Item.salads_all 
-    elsif x == 3 
+    elsif input == 3 
       @selected_menu = Item.sides_all 
-    elsif x == 4 
+    elsif input == 4 
       @selected_menu = Item.treats_all 
-    elsif x == 5 
+    elsif input == 5 
       @selected_menu = Item.drinks_all 
-    elsif x == 6 
+    elsif input == 6 
       @selected_menu = Item.breakfast_all 
-    elsif x == 7 
+    elsif input == 7 
       @selected_menu = Item.all 
-    elsif x == 99 
+    elsif input == 99 
       start 
     end 
    
