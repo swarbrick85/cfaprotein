@@ -1,7 +1,5 @@
 class Scraper 
   
-  attr_accessor :row_width
-
   def front_page 
     doc = Nokogiri::HTML(open("https://www.nutritionix.com/chick-fil-a/menu/premium/"))
     doc 
