@@ -1,5 +1,3 @@
-require_relative './cfaprotein.rb'
-
 class Cli 
   
   attr_accessor :selected_menu

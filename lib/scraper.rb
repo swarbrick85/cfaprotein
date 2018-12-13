@@ -1,7 +1,3 @@
-require_relative './cfaprotein.rb'
-
-
-
 class Scraper 
   
   attr_accessor :row_width
