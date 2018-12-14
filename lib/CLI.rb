@@ -457,6 +457,9 @@ class Cli
         puts "#{item.name} - #{item.cal_per_protein} calories per gram of protein"
       end 
      end 
+      if found_list.length == 0 
+        puts "Sorry, there are no items within that range."
+      end 
       puts "Please enter anything to start the app over."
       gets.strip 
       start 
