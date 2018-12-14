@@ -3,14 +3,12 @@ class Cli
   attr_accessor :selected_menu
   
   def display_menu(item_all_class_variable)
-    counter = 1 
     puts "Please select one of the following options:"
-    item_all_class_variable.each do |item|
-      puts "#{counter}. #{item.name}"
-      counter += 1 
+    item_all_class_variable.each_with_index do |item, index|
+      puts "#{index + 1}. #{item.name}"
     end 
     puts "99. Start the app over"
-  end 
+  end  
   
   def list_menus 
     puts "Please select from the following menu options:"
